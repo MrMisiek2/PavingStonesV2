@@ -13,6 +13,9 @@ public class GridBuildSystem : MonoBehaviour
     [Header("Build Prefabs (9 Slots)")]
     public GameObject[] buildPrefabs = new GameObject[9];
 
+    [Header("Slot Prefabs (9 Slots)")]
+    public GameObject[] slotsPrefabs = new GameObject[9];
+
     [Header("Grid Settings")]
     public float gridSize = 1f;
     public float buildDistance = 6f;
@@ -36,7 +39,7 @@ public class GridBuildSystem : MonoBehaviour
 
     void Start()
     {
-        CreateVisualGrid();
+        //CreateVisualGrid();
     }
 
     void Update()
@@ -46,7 +49,7 @@ public class GridBuildSystem : MonoBehaviour
         UpdatePreview();
         HandleInput();
         UpdateDemolishUI();
-        UpdateVisualGrid();
+        //UpdateVisualGrid();
     }
 
     // --- SLOT ---
@@ -73,7 +76,31 @@ public class GridBuildSystem : MonoBehaviour
     // --- PREVIEW ---
     void UpdatePreview()
     {
+
+        //Aktualizacja wybranego slotu
         GameObject currentPrefab = buildPrefabs[currentSlot];
+        for (int i = 0; i < 9; i++)
+        {
+            GameObject currentSlotNumber = slotsPrefabs[i];
+            if (currentSlot == i)
+            {
+                currentSlotNumber.transform.localScale = new Vector3(1.15f, 1.15f, 1f);
+                Image image = currentSlotNumber.GetComponent<Image>();
+                Color c = image.color;
+                c.a = 0.7f;        
+                image.color = c;
+            }
+            else
+            {
+                currentSlotNumber.transform.localScale = new Vector3(1f, 1f, 1f);
+                Image image = currentSlotNumber.GetComponent<Image>();
+                Color c = image.color;
+                c.a = 0.5f;
+                image.color = c;
+            }
+                
+        }
+        
         if (currentPrefab == null) { DestroyPreview(); return; }
 
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);

@@ -8,9 +8,9 @@ public class TileGeneratorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int x=0; x<10; x++)
+        for(int x=-10; x<10; x++)
         {
-            for (int y=0; y<10; y++)
+            for (int y=-10; y<10; y++)
             {
                 Vector3 position = new Vector3(x , -0.25f, y);
                 GameObject tile = Instantiate(tilePrefab, position, Quaternion.identity);
