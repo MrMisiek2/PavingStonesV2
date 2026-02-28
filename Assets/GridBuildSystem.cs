@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
@@ -25,7 +25,7 @@ public class GridBuildSystem : MonoBehaviour
     public float demolishHoldTime = 1f;
 
     [Header("Visual Grid")]
-    public GameObject gridTilePrefab; // ma≥y kwadrat z pÛ≥przezroczystym materia≥em
+    public GameObject gridTilePrefab; // ma≈Çy kwadrat z p√≥≈Çprzezroczystym materia≈Çem
 
     private int currentSlot = 0;
     private GameObject previewObject;
@@ -79,6 +79,7 @@ public class GridBuildSystem : MonoBehaviour
 
         //Aktualizacja wybranego slotu
         GameObject currentPrefab = buildPrefabs[currentSlot];
+
         for (int i = 0; i < 9; i++)
         {
             GameObject currentSlotNumber = slotsPrefabs[i];
@@ -101,7 +102,7 @@ public class GridBuildSystem : MonoBehaviour
                 
         }
         
-        if (currentPrefab == null) { DestroyPreview(); return; }
+        if (currentPrefab == null || currentPrefab.tag != "Buildable" ) { DestroyPreview(); return; }
 
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         if (!Physics.Raycast(ray, out RaycastHit hit, buildDistance, buildSurface)) { DestroyPreview(); return; }
@@ -128,6 +129,7 @@ public class GridBuildSystem : MonoBehaviour
     void HandleInput()
     {
         if (previewObject == null) return;
+        if (previewObject.tag != "Buildable") return;
 
         Vector3 pos = previewObject.transform.position;
         Vector2Int cell = WorldToCell(pos);
@@ -270,7 +272,7 @@ public class GridBuildSystem : MonoBehaviour
         if (previewObject == null) return;
 
         Vector3 center = SnapToGrid(previewObject.transform.position);
-        int index = 0;
+        //int index = 0;
         for (int x = -1; x <= 1; x++)
         {
             for (int z = -1; z <= 1; z++)
@@ -287,11 +289,54 @@ public class GridBuildSystem : MonoBehaviour
                 }
                 else
                 {
-                    // pozosta≥e pola grid
+                    // pozosta≈Çe pola grid
                     //tile.GetComponent<Renderer>().material.color = new Color(0.5f, 0.5f, 0.5f, 0.2f);
                     tile.GetComponent<Renderer>().enabled = false;
                 }
             }
         }
     }
+
+    public bool AddToCurrentSlot(GameObject itemPrefab)
+    {
+        if (buildPrefabs[currentSlot] != null)
+            return false; // slot zajƒôty
+
+        //if (slotsPrefabs[currentSlot] == null)
+        //    return false;
+
+        //GameObject item = Instantiate(itemPrefab, buildPrefabs[currentSlot].transform);
+        //item.transform.localPosition = Vector3.zero;
+        //item.transform.localRotation = Quaternion.identity;
+        //item.transform.localScale = Vector3.one * 0.6f;
+
+        buildPrefabs[currentSlot] = itemPrefab;
+
+        return true;
+    }
+
+    public bool RemoveFromCurrentSlot(GameObject itemPrefab)
+    {
+        if (buildPrefabs[currentSlot] == null)
+            return false; // slot wolny
+
+        //if (slotsPrefabs[currentSlot] == null)
+        //    return false;
+
+        //GameObject item = Instantiate(itemPrefab, buildPrefabs[currentSlot].transform);
+        //item.transform.localPosition = Vector3.zero;
+        //item.transform.localRotation = Quaternion.identity;
+        //item.transform.localScale = Vector3.one * 0.6f;
+
+        buildPrefabs[currentSlot] = null;
+
+        return true;
+    }
+
+    public GameObject GetCurrentObject()
+    {
+        return buildPrefabs[currentSlot];
+    }
+        
+
 }
