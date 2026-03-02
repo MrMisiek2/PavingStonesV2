@@ -315,7 +315,7 @@ public class GridBuildSystem : MonoBehaviour
         return true;
     }
 
-    public bool RemoveFromCurrentSlot(GameObject itemPrefab)
+    public bool RemoveFromCurrentSlot()
     {
         if (buildPrefabs[currentSlot] == null)
             return false; // slot wolny

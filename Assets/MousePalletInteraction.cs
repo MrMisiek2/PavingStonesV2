@@ -58,7 +58,7 @@ public class MousePalletInteraction : MonoBehaviour
                 if (bagPrefab != null)
                 {
                     Debug.Log("Hello", bagPrefab);
-                    inventory.RemoveFromCurrentSlot(bagPrefab);
+                    inventory.RemoveFromCurrentSlot();
                     Debug.Log("Hello3");
                 }
             }

@@ -14,6 +14,13 @@ public class PaletEUROccupancy : MonoBehaviour
     private float bagSpacing = 0.3f;
     private float bagSpacingHeight = 0.45f;
 
+    private void Start()
+    {
+        //Dodanie 30 worków na paletê na pocz¹tku
+        for (int i = 0; i < 30; i++)
+            AddBag();
+    }
+
     public GameObject AddBag()
     {
         if (currentBags >= maxLayers * bagsPerLayer)

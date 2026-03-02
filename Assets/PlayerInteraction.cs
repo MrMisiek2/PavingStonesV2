@@ -7,7 +7,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private LayerMask interactLayer;
     [SerializeField] private TextMeshProUGUI interactText;
 
-    private IInteractable currentInteractable;
+    [SerializeField] private IInteractable currentInteractable;
+    [SerializeField] private GridBuildSystem inventory;
 
     void Update()
     {
@@ -17,6 +18,19 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractable.Interact();
         }
+
+        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject() != null)
+        {
+            IItem item = inventory.GetCurrentObject().GetComponent<IItem>();
+            if (item != null)
+            {
+                Debug.Log("Dodanie obiektu do betoniarki");
+                currentInteractable.AddIngredient(inventory.GetCurrentObject(), item.GetWeight());
+                inventory.RemoveFromCurrentSlot();
+
+            }
+        }
+
     }
 
     void CheckForInteractable()
