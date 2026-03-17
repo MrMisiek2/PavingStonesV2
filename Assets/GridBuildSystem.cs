@@ -41,6 +41,7 @@ public class GridBuildSystem : MonoBehaviour
     public GameObject EmptyPallete;
     public GameObject EmptyBucket;
     public GameObject BucketOfWater;
+    public GameObject EmptyForm;
 
 
 
@@ -91,6 +92,7 @@ public class GridBuildSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Keypad3)) buildPrefabs[currentSlot] = EmptyPallete;
         if (Input.GetKeyDown(KeyCode.Keypad4)) buildPrefabs[currentSlot] = EmptyBucket;
         if (Input.GetKeyDown(KeyCode.Keypad5)) buildPrefabs[currentSlot] = BucketOfWater;
+        if (Input.GetKeyDown(KeyCode.Keypad6)) buildPrefabs[currentSlot] = EmptyForm;
     }
 
 
@@ -136,12 +138,13 @@ public class GridBuildSystem : MonoBehaviour
         if (previewObject == null)
         {
             previewObject = Instantiate(currentPrefab);
-            heightOffset = CalculateHeightOffset(previewObject);
+            heightOffset = 0f; // CalculateHeightOffset(previewObject);
         }
 
+        Debug.Log("currentRotationX: " + previewObject.transform.eulerAngles.x);
         snappedPos.y += heightOffset;
         previewObject.transform.position = snappedPos;
-        previewObject.transform.rotation = Quaternion.Euler(0f, currentRotation, 0f);
+        previewObject.transform.rotation = Quaternion.Euler(previewObject.transform.eulerAngles.x, currentRotation, 0f);
 
         SetPreviewColor(previewObject, canPlace ? Color.blue : Color.red, 0.5f);
     }
@@ -149,8 +152,28 @@ public class GridBuildSystem : MonoBehaviour
     // --- INPUT ---
     void HandleInput()
     {
+        // USUWANIE – działa ZAWSZE
+        if (Input.GetMouseButton(1))
+        {
+            Vector3 pos2 = GetMouseWorldPosition(); // <- ważne!
+            Vector2Int cell2 = WorldToCell(pos2);
+
+            if (occupiedCells.Contains(cell2))
+            {
+                demolishTimer += Time.deltaTime;
+
+                if (demolishTimer >= demolishHoldTime)
+                {
+                    RemoveObjectAtCell(cell2);
+                    demolishTimer = 0f;
+                }
+            }
+            else demolishTimer = 0f;
+        }
+        else demolishTimer = 0f;
+
         if (previewObject == null) return;
-        if (previewObject.tag != "Buildable" || previewObject.tag != "Placable") return;
+        if (previewObject.tag != "Buildable" && previewObject.tag != "Placable") return;
 
         Vector3 pos = previewObject.transform.position;
         Vector2Int cell = WorldToCell(pos);
@@ -160,32 +183,35 @@ public class GridBuildSystem : MonoBehaviour
         {
             GameObject obj = Instantiate(buildPrefabs[currentSlot], pos, previewObject.transform.rotation);
             occupiedCells.Add(cell);
+            RemoveFromCurrentSlot();
         }
 
         // Usuwanie
-        if (Input.GetMouseButton(1))
-        {
-            if (occupiedCells.Contains(cell))
-            {
-                demolishTimer += Time.deltaTime;
-                if (demolishTimer >= demolishHoldTime)
-                {
-                    RemoveObjectAtCell(cell);
-                    demolishTimer = 0f;
-                }
-            }
-            else demolishTimer = 0f;
-        }
-        else demolishTimer = 0f;
+        //if (Input.GetMouseButton(1))
+        //{
+        //    if (occupiedCells.Contains(cell))
+        //    {
+        //        demolishTimer += Time.deltaTime;
+        //        if (demolishTimer >= demolishHoldTime)
+        //        {
+        //            RemoveObjectAtCell(cell);
+        //            demolishTimer = 0f;
+        //        }
+        //    }
+        //    else demolishTimer = 0f;
+        //}
+        //else demolishTimer = 0f;
     }
 
     void UpdateDemolishUI()
     {
         if (demolishProgressBar == null) return;
 
-        if (Input.GetMouseButton(1) && previewObject != null)
+        if (Input.GetMouseButton(1))
         {
-            Vector2Int cell = WorldToCell(SnapToGrid(previewObject.transform.position));
+            Vector3 pos = GetMouseWorldPosition();
+            Vector2Int cell = WorldToCell(SnapToGrid(pos));
+
             if (occupiedCells.Contains(cell))
             {
                 demolishProgressBar.fillAmount = Mathf.Clamp01(demolishTimer / demolishHoldTime);
@@ -370,6 +396,17 @@ public class GridBuildSystem : MonoBehaviour
     {
         return buildPrefabs[currentSlot];
     }
-        
 
+    Vector3 GetMouseWorldPosition()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            return hit.point;
+        }
+
+        return Vector3.zero;
+    }
 }

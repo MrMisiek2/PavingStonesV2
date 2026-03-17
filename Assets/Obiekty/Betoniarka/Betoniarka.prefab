@@ -406,6 +406,11 @@ MonoBehaviour:
   infill: {fileID: 2227788167061263658}
   infillAmmount: 0
   ingredients: []
+  Recipes:
+  - name: Piasek
+    amount: 150
+  - name: Cement
+    amount: 50
 --- !u!1 &6580705387162669396
 GameObject:
   m_ObjectHideFlags: 0

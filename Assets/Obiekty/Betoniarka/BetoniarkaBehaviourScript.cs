@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using System.Collections;
 
 public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
 {
@@ -10,6 +11,7 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     [SerializeField] public bool isActive = true;
     [SerializeField] public GameObject infill;
     [SerializeField] private float infillAmmount;
+    [SerializeField] private float mixingTime = 15f;
 
     [System.Serializable]
     public class Ingredient
@@ -47,15 +49,25 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
 
     }
 
-    public void AddIngredient(GameObject ingredientName, float amount)
+    public int  AddIngredient(GameObject ingredientName, float amount)
     {
         IItem item = ingredientName.GetComponent<IItem>();
         // sprawdzamy czy sk³adnik ju¿ istnieje
         
         Ingredient existing = ingredients.Find(i => i.name == item.GetName());
-        Debug.Log("existing" + item + "ingredientName" + ingredientName);
+        //Debug.Log("existing" + item + "ingredientName" + ingredientName);
         if (existing != null)
         {
+            float sumIngridientRecipe = 0f;
+            foreach (var Recipe in Recipes)
+            {
+                if (Recipe.name == existing.name)
+                    sumIngridientRecipe += Recipe.amount;
+            }
+
+            //Nie dodajemy jeœli iloœc przekroczy przepis
+            if (existing.amount >= sumIngridientRecipe) return -1;
+
             existing.amount += amount;
         }
         else
@@ -67,33 +79,49 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
         }
 
         Debug.Log("Dodano " + amount + " " + ingredientName);
+        return 0;
     }
 
     public void SetActive(bool state)
     {
-        isActive = state;
+        isActive = state; 
     }
 
     public void Interact()
     {
         isActive = !isActive;
+        if (isActive == true)
+            StartCoroutine(TurnOffAfterTime(mixingTime));
+
         Debug.Log("Maszyna: " + (isActive ? "W£¥CZONA" : "WY£¥CZONA"));
     }
     public string GetInteractText()
     {
-        return isActive ? "W³¹cz 'E'"
-                        : "Wy³¹cz 'E'";
+        return isActive ? "Wy³¹cz 'E'"
+                        : "W³¹cz 'E'";
     }
 
-    public float GetTotalWeight()
+    public float GetTotalWeight(string name)
     {
         float total = 0f;
-
-        foreach (var ingredient in ingredients)
+        if (name is null)
         {
-            total += ingredient.amount;
-            
+            foreach (var ingredient in ingredients)
+            {
+                total += ingredient.amount;
+
+            }
         }
+        else
+        {
+            foreach (var ingredient in ingredients)
+            {
+                if (ingredient.name == name)
+                total += ingredient.amount;
+
+            }
+        }
+        
 
         return total;
     }
@@ -102,9 +130,10 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     {
         string result="";//= objectName + "\n";
 
-        foreach (Ingredient ing in ingredients)
+        foreach (Recipe rec in Recipes)
         {
-            result += ing.name + ": " + ing.amount + "\n";
+
+            result += rec.name + ": " + GetTotalWeight(rec.name) + " / " + rec.amount + "\n";
         }
 
         return result;
@@ -112,7 +141,7 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
 
     private void UpdateVisualOccucpacy()
     {
-        infillAmmount = GetTotalWeight();
+        infillAmmount = GetTotalWeight(null);
 
         if (infillAmmount == 0)
         {
@@ -136,4 +165,12 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
             infill.transform.localPosition = pos;
         }
     }
+
+    IEnumerator TurnOffAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        isActive = false;
+    }
+
 }

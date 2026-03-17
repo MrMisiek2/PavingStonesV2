@@ -28,8 +28,10 @@ public class PlayerInteraction : MonoBehaviour
             if (item != null)
             {
                 Debug.Log("Dodanie obiektu do betoniarki: " , inventory.GetCurrentObject());
-                currentInteractable.AddIngredient(inventory.GetCurrentObject(), item.GetWeight());
-                inventory.RemoveFromCurrentSlot();
+                int status = currentInteractable.AddIngredient(inventory.GetCurrentObject(), item.GetWeight());
+                
+                if (status==0)
+                    inventory.RemoveFromCurrentSlot();
 
             }
         }
