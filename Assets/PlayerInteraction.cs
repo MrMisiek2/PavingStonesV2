@@ -10,6 +10,9 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private IInteractable currentInteractable;
     [SerializeField] private GridBuildSystem inventory;
 
+
+    private GameObject currentObject;
+
     void Update()
     {
         CheckForInteractable();
@@ -24,7 +27,7 @@ public class PlayerInteraction : MonoBehaviour
             IItem item = inventory.GetCurrentObject().GetComponent<IItem>();
             if (item != null)
             {
-                Debug.Log("Dodanie obiektu do betoniarki");
+                Debug.Log("Dodanie obiektu do betoniarki: " , inventory.GetCurrentObject());
                 currentInteractable.AddIngredient(inventory.GetCurrentObject(), item.GetWeight());
                 inventory.RemoveFromCurrentSlot();
 
@@ -41,17 +44,64 @@ public class PlayerInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            GameObject hitObject = hit.collider.gameObject;
+
+
+
+            //Jeœli zmieniamy obiekt to wy³¹czamy podpowiedz
+            if (hitObject != currentObject && hitObject != null && currentObject != null)
+            {
+                if (currentObject != null)
+                {
+
+                    ToggleCanvas(currentObject, false);
+                    currentObject = null;
+                }
+            }
 
             if (interactable != null)
             {
+                currentObject = hitObject;
+                ToggleCanvas(currentObject, true);
+                
+                
+
                 currentInteractable = interactable;
                 interactText.text = interactable.GetInteractText();
                 interactText.gameObject.SetActive(true);
                 return;
             }
+            //else
+            //{
+            //    if (hitObject != null)
+            //    {
+            //        ToggleCanvas(hitObject, false);
+            //        hitObject = null;
+            //    }
+
+            //}
         }
 
+
+        if (currentObject != null)
+        {
+            ToggleCanvas(currentObject, false);
+            currentObject = null;
+        }
         currentInteractable = null;
         interactText.gameObject.SetActive(false);
+    }
+
+    void ToggleCanvas(GameObject obj, bool state)
+    {
+        Canvas canvas = obj.GetComponentInChildren<Canvas>(true);
+
+
+        //Debug.Log("currentObject: " + obj  + "statue: " + state + "canvas: " + canvas);
+        
+        if (canvas != null)
+        {
+            canvas.gameObject.SetActive(state);
+        }
     }
 }

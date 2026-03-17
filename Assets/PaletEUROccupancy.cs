@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PaletEUROccupancy : MonoBehaviour
 {
-    [SerializeField] private GameObject cementBagPrefab;
+    [SerializeField] private GameObject bagPrefab;
     [SerializeField] private Transform bagsParent;
 
     private int maxLayers = 8;
@@ -17,15 +17,16 @@ public class PaletEUROccupancy : MonoBehaviour
     private void Start()
     {
         //Dodanie 30 worków na paletê na pocz¹tku
-        for (int i = 0; i < 30; i++)
-            AddBag();
+        //for (int i = 0; i < 30; i++)
+        //    AddBag();
     }
 
-    public GameObject AddBag()
+    public GameObject AddBag(GameObject newBagPrefab)
     {
-        if (currentBags >= maxLayers * bagsPerLayer)
-            return null;
+        if (newBagPrefab != bagPrefab && bagPrefab != null ) return null;
+        if (currentBags >= maxLayers * bagsPerLayer) return null;
 
+        bagPrefab = newBagPrefab;
         int layer = currentBags / bagsPerLayer;
         int indexInLayer = currentBags % bagsPerLayer;
 
@@ -35,11 +36,11 @@ public class PaletEUROccupancy : MonoBehaviour
             (indexInLayer / 4) * bagSpacingHeight
         );
 
-        GameObject bag = Instantiate(cementBagPrefab, bagsParent);
+        GameObject bag = Instantiate(bagPrefab, bagsParent);
         bag.transform.localPosition = position;
 
         currentBags++;
-        return cementBagPrefab;
+        return bagPrefab;
     }
 
     //public void AddBag() //Dodaj worek na paletê
@@ -64,7 +65,7 @@ public class PaletEUROccupancy : MonoBehaviour
 
         currentBags--;
 
-        return cementBagPrefab;
+        return bagPrefab;
     }
 
     public int GetCurrentBags()

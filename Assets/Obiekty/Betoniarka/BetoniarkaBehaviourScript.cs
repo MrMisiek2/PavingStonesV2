@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
 {
     public GameObject ramiona;
+    public TextMeshProUGUI IngridientsText;
     [SerializeField] private float rotationSpeed = 60f; // stopnie na sekundê
     [SerializeField] public bool isActive = true;
     [SerializeField] public GameObject infill;
@@ -16,7 +18,15 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
         public float amount;
     }
 
+    [System.Serializable]
+    public class Recipe
+    {
+        public string name;
+        public float amount;
+    }
+
     public List<Ingredient> ingredients = new List<Ingredient>();
+    public List<Recipe> Recipes = new List<Recipe>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,46 +36,24 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     // Update is called once per frame
     void Update()
     {
-        infillAmmount = GetTotalWeight();
- 
-        if (infillAmmount == 0)
-        {
-            Vector3 pos = infill.transform.localPosition;
-            pos.y = 1.05f;
-            infill.transform.localPosition = pos;
-        }
+        //Aktualizcja tekstu w okienku nad obiektem
+        IngridientsText.text = GetDisplayText();
 
-        if (infillAmmount == 250)
-        {
-            Vector3 pos = infill.transform.localPosition;
-            pos.y = 1.75f;
-            infill.transform.localPosition = pos;
-        }
-
-        if (infillAmmount > 0 && infillAmmount < 250)
-        {
-            Vector3 pos = infill.transform.localPosition;
-            pos.y = 1.05f + ((0.4f * infillAmmount) / 100 * 0.7f);
-            Debug.Log("pos.y "+pos.y) ;
-            infill.transform.localPosition = pos;
-        }
-
+        UpdateVisualOccucpacy();
 
         if (!isActive) return;
             
         ramiona.transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
-       
-        
-
 
     }
 
     public void AddIngredient(GameObject ingredientName, float amount)
     {
-        IItem item = ingredientName.GetComponent<IItem>(); 
+        IItem item = ingredientName.GetComponent<IItem>();
         // sprawdzamy czy sk³adnik ju¿ istnieje
+        
         Ingredient existing = ingredients.Find(i => i.name == item.GetName());
-
+        Debug.Log("existing" + item + "ingredientName" + ingredientName);
         if (existing != null)
         {
             existing.amount += amount;
@@ -110,4 +98,42 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
         return total;
     }
 
+    public string GetDisplayText()
+    {
+        string result="";//= objectName + "\n";
+
+        foreach (Ingredient ing in ingredients)
+        {
+            result += ing.name + ": " + ing.amount + "\n";
+        }
+
+        return result;
+    }
+
+    private void UpdateVisualOccucpacy()
+    {
+        infillAmmount = GetTotalWeight();
+
+        if (infillAmmount == 0)
+        {
+            Vector3 pos = infill.transform.localPosition;
+            pos.y = 1.05f;
+            infill.transform.localPosition = pos;
+        }
+
+        if (infillAmmount == 250)
+        {
+            Vector3 pos = infill.transform.localPosition;
+            pos.y = 1.75f;
+            infill.transform.localPosition = pos;
+        }
+
+        if (infillAmmount > 0 && infillAmmount < 250)
+        {
+            Vector3 pos = infill.transform.localPosition;
+            pos.y = 1.05f + ((0.4f * infillAmmount) / 100 * 0.7f);
+            //Debug.Log("pos.y " + pos.y);
+            infill.transform.localPosition = pos;
+        }
+    }
 }

@@ -53,7 +53,7 @@ public class MousePalletInteraction : MonoBehaviour
 
             if (pallet != null && inventory.GetCurrentObject() != null)
             {
-                GameObject bagPrefab = pallet.AddBag();
+                GameObject bagPrefab = pallet.AddBag(inventory.GetCurrentObject());
                 
                 if (bagPrefab != null)
                 {

@@ -35,6 +35,16 @@ public class GridBuildSystem : MonoBehaviour
     private float heightOffset;
     private float demolishTimer = 0f;
 
+    [Header("Obiekty do generowania")]
+    public GameObject SandBag;
+    public GameObject CementBag;
+    public GameObject EmptyPallete;
+    public GameObject EmptyBucket;
+    public GameObject BucketOfWater;
+
+
+
+
     private GameObject[,] visualGrid = new GameObject[3, 3]; // 3x3 grid
 
     void Start()
@@ -44,6 +54,7 @@ public class GridBuildSystem : MonoBehaviour
 
     void Update()
     {
+        HandleItemSpawnInInventory();
         HandleSlotChange();
         HandleRotation();
         UpdatePreview();
@@ -72,6 +83,16 @@ public class GridBuildSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) currentRotation -= rotationStep;
         if (Input.GetKeyDown(KeyCode.E)) currentRotation += rotationStep;
     }
+
+    void HandleItemSpawnInInventory()
+    {
+        if (Input.GetKeyDown(KeyCode.Keypad1)) buildPrefabs[currentSlot] = SandBag;
+        if (Input.GetKeyDown(KeyCode.Keypad2)) buildPrefabs[currentSlot] = CementBag;
+        if (Input.GetKeyDown(KeyCode.Keypad3)) buildPrefabs[currentSlot] = EmptyPallete;
+        if (Input.GetKeyDown(KeyCode.Keypad4)) buildPrefabs[currentSlot] = EmptyBucket;
+        if (Input.GetKeyDown(KeyCode.Keypad5)) buildPrefabs[currentSlot] = BucketOfWater;
+    }
+
 
     // --- PREVIEW ---
     void UpdatePreview()
@@ -102,7 +123,7 @@ public class GridBuildSystem : MonoBehaviour
                 
         }
         
-        if (currentPrefab == null || currentPrefab.tag != "Buildable" ) { DestroyPreview(); return; }
+        if (currentPrefab == null || (currentPrefab.tag != "Buildable" && currentPrefab.tag != "Placable")  ) { DestroyPreview(); return; }
 
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         if (!Physics.Raycast(ray, out RaycastHit hit, buildDistance, buildSurface)) { DestroyPreview(); return; }
@@ -129,7 +150,7 @@ public class GridBuildSystem : MonoBehaviour
     void HandleInput()
     {
         if (previewObject == null) return;
-        if (previewObject.tag != "Buildable") return;
+        if (previewObject.tag != "Buildable" || previewObject.tag != "Placable") return;
 
         Vector3 pos = previewObject.transform.position;
         Vector2Int cell = WorldToCell(pos);
@@ -183,6 +204,18 @@ public class GridBuildSystem : MonoBehaviour
         GameObject toRemove = null;
 
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Buildable"))
+        {
+            Vector3 snappedPos = SnapToGrid(obj.transform.position);
+            Vector2Int objCell = WorldToCell(snappedPos);
+
+            if (objCell == cell)
+            {
+                toRemove = obj;
+                break;
+            }
+        }
+
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Placable"))
         {
             Vector3 snappedPos = SnapToGrid(obj.transform.position);
             Vector2Int objCell = WorldToCell(snappedPos);
