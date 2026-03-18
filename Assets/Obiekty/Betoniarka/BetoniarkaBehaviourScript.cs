@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
+using System.Reflection.Emit;
+using Unity.Multiplayer.Center.Common;
 
 public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
 {
@@ -9,8 +12,15 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     public TextMeshProUGUI IngridientsText;
     [SerializeField] private float rotationSpeed = 60f; // stopnie na sekundê
     [SerializeField] public bool isActive = true;
+    [SerializeField] public bool isReady = false;
     [SerializeField] public GameObject infill;
     [SerializeField] private float infillAmmount;
+    [SerializeField] private float concerteAmmount;
+
+    [SerializeField] private TextMeshProUGUI MixingStatus;
+    public Image mixingProgressBar;
+    public Image mixingProgressBarBackground;
+    private float mixingTimer = 0f;
     [SerializeField] private float mixingTime = 15f;
 
     [System.Serializable]
@@ -42,6 +52,36 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
         IngridientsText.text = GetDisplayText();
 
         UpdateVisualOccucpacy();
+
+
+
+        if (isActive) {
+
+            mixingTimer += Time.deltaTime;
+            MixingStatus.gameObject.SetActive(true);
+            MixingStatus.text = "Mieszanie...";
+            mixingProgressBar.fillAmount = Mathf.Clamp01(mixingTimer / mixingTime);
+            mixingProgressBar.color = Color.yellow;
+            mixingProgressBar.enabled = true;
+            mixingProgressBarBackground.enabled = true;
+        }
+        else if (isReady)
+        {
+            MixingStatus.gameObject.SetActive(true);
+            MixingStatus.text = "GOTOWE";
+            mixingProgressBar.enabled = true;
+            mixingProgressBarBackground.enabled = true;
+            mixingProgressBar.color = Color.green;
+        }
+        else
+        {
+            MixingStatus.gameObject.SetActive(false);
+            MixingStatus.text = "";
+            mixingProgressBar.enabled = false;
+            mixingProgressBarBackground.enabled = false;
+            mixingTimer = 0f;
+            mixingProgressBar.fillAmount = 0f;
+        }
 
         if (!isActive) return;
             
@@ -89,7 +129,9 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
 
     public void Interact()
     {
-        isActive = !isActive;
+
+        if (isActive == false)
+            isActive = !isActive;
         if (isActive == true)
             StartCoroutine(TurnOffAfterTime(mixingTime));
 
@@ -97,31 +139,40 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     }
     public string GetInteractText()
     {
-        return isActive ? "Wy³¹cz 'E'"
-                        : "W³¹cz 'E'";
+        string message = "";
+        if (isActive == false && isReady == false)
+            message = "W³¹cz 'E'";
+        return message;
     }
 
     public float GetTotalWeight(string name)
     {
         float total = 0f;
-        if (name is null)
+        if (concerteAmmount == 0f)
         {
-            foreach (var ingredient in ingredients)
+            if (name is null)
             {
-                total += ingredient.amount;
+                foreach (var ingredient in ingredients)
+                {
+                    total += ingredient.amount;
 
+                }
+            }
+            else
+            {
+                foreach (var ingredient in ingredients)
+                {
+                    if (ingredient.name == name)
+                        total += ingredient.amount;
+
+                }
             }
         }
         else
-        {
-            foreach (var ingredient in ingredients)
-            {
-                if (ingredient.name == name)
-                total += ingredient.amount;
+            total = concerteAmmount;
 
-            }
-        }
-        
+
+
 
         return total;
     }
@@ -130,10 +181,15 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     {
         string result="";//= objectName + "\n";
 
+        if (!isReady)
         foreach (Recipe rec in Recipes)
         {
 
             result += rec.name + ": " + GetTotalWeight(rec.name) + " / " + rec.amount + "\n";
+        }
+        if (isReady)
+        {
+            result = "Beton: " + concerteAmmount + " / " + "250";
         }
 
         return result;
@@ -169,8 +225,36 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     IEnumerator TurnOffAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-
+        isReady = true;
         isActive = false;
+        concerteAmmount = GetTotalWeight(null);
+        ClearIngredients();
+
+    }
+
+
+    public void ClearIngredients()
+    {
+        ingredients.Clear();
+    }
+
+    public int GetConcerte(int ammount)
+    {
+        if (concerteAmmount > 0 && isReady == true)
+        {
+            concerteAmmount = concerteAmmount - ammount;
+            
+            if (concerteAmmount <= 0)
+            {
+                isReady = false;
+                concerteAmmount = 0f;
+            }
+            return 0;
+
+        }
+        else
+            return -1;
+
     }
 
 }

@@ -1473,6 +1473,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 915994424333808225, guid: 6d792894692dbf846a68ebd28fb9cdc2, type: 3}
+      propertyPath: mixingTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3189179858025997061, guid: 6d792894692dbf846a68ebd28fb9cdc2, type: 3}
       propertyPath: m_Name
       value: Betoniarka

@@ -1,33 +1,124 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: S:/UNITY/PavingStonesV2/Packages/manifest.json
+    m_FilePath: C:/Unity Projects/Production line/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639080833183783068
-    m_Hash: 767983008
+      ticks: 639094262190595719
+    m_Hash: 1349097778
   m_LockFileStatus:
-    m_FilePath: S:/UNITY/PavingStonesV2/Packages/packages-lock.json
+    m_FilePath: C:/Unity Projects/Production line/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639080833183783068
-    m_Hash: 1647251457
+      ticks: 639094262190675517
+    m_Hash: 3478540909
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: S:/UNITY/PavingStonesV2/Packages
+m_ProjectPath: C:/Unity Projects/Production line/Packages
 m_EditorVersion: 6000.3.8f1 (1c7db571dde0)
 m_ResolvedPackages:
+- packageId: com.unity.2d.sprite@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 2
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.2d.sprite@08e067ec1643
+  assetPath: Packages/com.unity.2d.sprite
+  name: com.unity.2d.sprite
+  displayName: 2D Sprite
+  author:
+    name: 
+    email: 
+    url: 
+  category: 2D
+  type: 
+  description: Use Unity Sprite Editor Window to create and edit Sprite asset properties
+    like pivot, borders and Physics shape
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    recommended: 1.0.0
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - 2d
+  - sprite
+  - sprite editor window
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+    compliance:
+      status: 0
+      violations: []
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+    isDiscoverable: 1
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  signature:
+    status: 0
+    reason: 
+    attestation:
+      format: 
+      publishingChannel: 
+      entitlementKeys: []
+      ownerOrgName: 
+      ownerOrgId: 
+      publisherName: 
+    errorCode: 
+  assetStore:
+    productId: 
+  fingerprint: 08e067ec16439baf6179e7b573789fe56478f7e0
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.0.0
+    minimumUnityVersion: 2019.2
+  compliance:
+    status: 0
+    violation:
+      scopePatternExpression: 
+      message: 
+      readMoreLink: 
 - packageId: com.unity.ai.navigation@2.0.10
   testable: 0
   isDirectDependency: 1
   version: 2.0.10
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.ai.navigation@c33a115e9883
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.ai.navigation@c33a115e9883
   assetPath: Packages/com.unity.ai.navigation
   name: com.unity.ai.navigation
   displayName: AI Navigation
@@ -165,7 +256,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.11.3
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.collab-proxy@e566cd3e7623
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.collab-proxy@e566cd3e7623
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -361,7 +452,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.2
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.feature.development@767aadbc6eb7
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.feature.development@767aadbc6eb7
   assetPath: Packages/com.unity.feature.development
   name: com.unity.feature.development
   displayName: Engineering
@@ -483,7 +574,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.39
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.ide.rider@4504839d03f7
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.ide.rider@4504839d03f7
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -626,7 +717,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.26
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -755,7 +846,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.2.5
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.ide.vscode@82e68656b7bd
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.ide.vscode@82e68656b7bd
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -869,7 +960,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.1
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -976,7 +1067,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.6.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -1077,7 +1168,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.10
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.timeline@7f8b2fb101b6
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.timeline@7f8b2fb101b6
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1280,7 +1371,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.ugui@bb329a87fcdc
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.ugui@bb329a87fcdc
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: uGUI
@@ -1387,7 +1478,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.9
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.visualscripting@191c0d7e3b69
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.visualscripting@191c0d7e3b69
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1529,7 +1620,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.accessibility
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.accessibility
   assetPath: Packages/com.unity.modules.accessibility
   name: com.unity.modules.accessibility
   displayName: Accessibility
@@ -1617,7 +1708,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.adaptiveperformance
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.adaptiveperformance
   assetPath: Packages/com.unity.modules.adaptiveperformance
   name: com.unity.modules.adaptiveperformance
   displayName: Adaptive Performance
@@ -1711,7 +1802,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.ai
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.ai
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1799,7 +1890,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.androidjni
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.androidjni
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1886,7 +1977,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.animation
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.animation
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1974,7 +2065,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.assetbundle
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.assetbundle
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -2062,7 +2153,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.audio
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.audio
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -2150,7 +2241,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.cloth
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.cloth
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -2242,7 +2333,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.director
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.director
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -2338,7 +2429,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.imageconversion
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.imageconversion
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -2426,7 +2517,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.imgui
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2514,7 +2605,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.jsonserialize
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2602,7 +2693,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.particlesystem
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.particlesystem
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2690,7 +2781,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.physics
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2778,7 +2869,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.physics2d
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.physics2d
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2866,7 +2957,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.screencapture
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.screencapture
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2958,7 +3049,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.terrain
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.terrain
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -3046,7 +3137,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.terrainphysics
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.terrainphysics
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -3142,7 +3233,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.tilemap
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.tilemap
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -3233,7 +3324,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.ui
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.ui
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -3321,7 +3412,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.uielements
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.uielements
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -3429,7 +3520,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.umbra
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.umbra
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -3517,7 +3608,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.unityanalytics
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.unityanalytics
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3612,7 +3703,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.unitywebrequest
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3700,7 +3791,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3796,7 +3887,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.unitywebrequestaudio
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.unitywebrequestaudio
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -3892,7 +3983,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.unitywebrequesttexture
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.unitywebrequesttexture
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -3988,7 +4079,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.unitywebrequestwww
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.unitywebrequestwww
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -4100,7 +4191,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.vectorgraphics
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.vectorgraphics
   assetPath: Packages/com.unity.modules.vectorgraphics
   name: com.unity.modules.vectorgraphics
   displayName: Vector Graphics
@@ -4207,7 +4298,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.vehicles
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.vehicles
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -4299,7 +4390,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.video
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.video
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -4399,7 +4490,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.vr
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.vr
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -4502,7 +4593,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.wind
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.wind
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -4590,7 +4681,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.xr
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.xr
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -4690,7 +4781,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.subsystems
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.subsystems
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -4782,7 +4873,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.modules.hierarchycore
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.modules.hierarchycore
   assetPath: Packages/com.unity.modules.hierarchycore
   name: com.unity.modules.hierarchycore
   displayName: Hierarchy Core
@@ -4870,7 +4961,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.ext.nunit@d8c07649098d
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.ext.nunit@d8c07649098d
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -4961,7 +5052,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.editorcoroutines@54394ed3283c
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.editorcoroutines@54394ed3283c
   assetPath: Packages/com.unity.editorcoroutines
   name: com.unity.editorcoroutines
   displayName: Editor Coroutines
@@ -5060,7 +5151,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.1
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.performance.profile-analyzer@311968ce4be7
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.performance.profile-analyzer@311968ce4be7
   assetPath: Packages/com.unity.performance.profile-analyzer
   name: com.unity.performance.profile-analyzer
   displayName: Profile Analyzer
@@ -5172,7 +5263,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.0
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.testtools.codecoverage@19a841221620
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.testtools.codecoverage@19a841221620
   assetPath: Packages/com.unity.testtools.codecoverage
   name: com.unity.testtools.codecoverage
   displayName: Code Coverage
@@ -5336,7 +5427,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.1.1
   source: 1
-  resolvedPath: S:\UNITY\PavingStonesV2\Library\PackageCache\com.unity.settings-manager@0b8638c5ce86
+  resolvedPath: C:\Unity Projects\Production line\Library\PackageCache\com.unity.settings-manager@0b8638c5ce86
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager

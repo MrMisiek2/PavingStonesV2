@@ -125,7 +125,7 @@ public class GridBuildSystem : MonoBehaviour
                 
         }
         
-        if (currentPrefab == null || (currentPrefab.tag != "Buildable" && currentPrefab.tag != "Placable")  ) { DestroyPreview(); return; }
+        if (currentPrefab == null || (currentPrefab.tag != "Buildable" && currentPrefab.tag != "Placable" && currentPrefab.tag != "Form")  ) { DestroyPreview(); return; }
 
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         if (!Physics.Raycast(ray, out RaycastHit hit, buildDistance, buildSurface)) { DestroyPreview(); return; }
@@ -141,7 +141,7 @@ public class GridBuildSystem : MonoBehaviour
             heightOffset = 0f; // CalculateHeightOffset(previewObject);
         }
 
-        Debug.Log("currentRotationX: " + previewObject.transform.eulerAngles.x);
+        //Debug.Log("currentRotationX: " + previewObject.transform.eulerAngles.x);
         snappedPos.y += heightOffset;
         previewObject.transform.position = snappedPos;
         previewObject.transform.rotation = Quaternion.Euler(previewObject.transform.eulerAngles.x, currentRotation, 0f);
@@ -173,7 +173,7 @@ public class GridBuildSystem : MonoBehaviour
         else demolishTimer = 0f;
 
         if (previewObject == null) return;
-        if (previewObject.tag != "Buildable" && previewObject.tag != "Placable") return;
+        if (previewObject.tag != "Buildable" && previewObject.tag != "Placable" && previewObject.tag != "Form") return;
 
         Vector3 pos = previewObject.transform.position;
         Vector2Int cell = WorldToCell(pos);
@@ -258,6 +258,25 @@ public class GridBuildSystem : MonoBehaviour
             Destroy(toRemove);
             occupiedCells.Remove(cell);
         }
+
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Form"))
+        {
+            Vector3 snappedPos = SnapToGrid(obj.transform.position);
+            Vector2Int objCell = WorldToCell(snappedPos);
+
+            if (objCell == cell)
+            {
+                toRemove = obj;
+                break;
+            }
+        }
+
+        if (toRemove != null)
+        {
+            Destroy(toRemove);
+            occupiedCells.Remove(cell);
+        }
+
     }
 
     // --- HELPERS ---

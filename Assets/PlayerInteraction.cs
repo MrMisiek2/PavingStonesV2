@@ -22,7 +22,7 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable.Interact();
         }
 
-        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject() != null)
+        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject().tag != "Form")
         {
             IItem item = inventory.GetCurrentObject().GetComponent<IItem>();
             if (item != null)
@@ -35,6 +35,23 @@ public class PlayerInteraction : MonoBehaviour
 
             }
         }
+        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject().tag == "Form")
+        {
+            Debug.Log("Dodanie obiektu");
+            Forma forma = inventory.GetCurrentObject().GetComponent<Forma>();
+            if (forma != null)
+            {
+                Debug.Log("Zabranie betonu z betoniarki: "+ inventory.GetCurrentObject() + "Czy forma jest pusta: "+ forma.isEmptyForm());
+                if (forma.isEmptyForm() == true) {
+                    int status = currentInteractable.GetConcerte(25);
+
+                    if (status == 0)
+                        forma.setIsEmpty(false);
+                }
+
+            }
+        }
+            
 
     }
 
