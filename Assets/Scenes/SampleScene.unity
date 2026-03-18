@@ -1846,16 +1846,34 @@ MonoBehaviour:
     m_Bits: 64
   uiCanvas: {fileID: 783201908}
   demolishProgressBar: {fileID: 236227945}
-  buildPrefabs:
-  - {fileID: 3467144837875537271, guid: f9fb9aabe2870df4e930ae75823f1a70, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  items:
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
+  - data: {fileID: 0}
+    amount: 0
+    durability: 0
   slotsPrefabs:
   - {fileID: 1048750354}
   - {fileID: 1471026615}
@@ -1871,12 +1889,12 @@ MonoBehaviour:
   rotationStep: 90
   demolishHoldTime: 1
   gridTilePrefab: {fileID: 1566135141400724672, guid: a7be242bc07ab4d48a57e44f408aea73, type: 3}
-  SandBag: {fileID: 7822111364862138786, guid: a799a6920a0c23a43b2a009d1c480f78, type: 3}
-  CementBag: {fileID: 7822111364862138786, guid: 7074da140a9a42c4593860b6787f0f3a, type: 3}
-  EmptyPallete: {fileID: 5167695909784023013, guid: 88c03ea86843bd54394f0700fc918616, type: 3}
+  SandBag: {fileID: 11400000, guid: 2a3b75fd351ed4a4e8c442b00a5e82aa, type: 2}
+  CementBag: {fileID: 11400000, guid: 20144055bbc1e1647ac67d162ab4c56f, type: 2}
+  EmptyPallete: {fileID: 11400000, guid: 9a63b81be580b7f46b8afbf30a14097d, type: 2}
   EmptyBucket: {fileID: 0}
   BucketOfWater: {fileID: 0}
-  EmptyForm: {fileID: 6572583181512220944, guid: 2d90bce500761f442aa69c512fbb44f1, type: 3}
+  EmptyForm: {fileID: 11400000, guid: 8375e46771cab654895ae1ecb8defade, type: 2}
 --- !u!114 &1953232516
 MonoBehaviour:
   m_ObjectHideFlags: 0

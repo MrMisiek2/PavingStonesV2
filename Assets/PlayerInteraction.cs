@@ -22,34 +22,40 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable.Interact();
         }
 
-        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject().tag != "Form")
+        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject().data.prefab != null )
         {
-            IItem item = inventory.GetCurrentObject().GetComponent<IItem>();
-            if (item != null)
+            if(inventory.GetCurrentObject().data.prefab.tag != "Form")
             {
-                Debug.Log("Dodanie obiektu do betoniarki: " , inventory.GetCurrentObject());
-                int status = currentInteractable.AddIngredient(inventory.GetCurrentObject(), item.GetWeight());
-                
-                if (status==0)
-                    inventory.RemoveFromCurrentSlot();
+                IItem item = inventory.GetCurrentObject().data.prefab.GetComponent<IItem>();
+                if (item != null)
+                {
+                    Debug.Log("Dodanie obiektu do betoniarki: ", inventory.GetCurrentObject().data.prefab);
+                    int status = currentInteractable.AddIngredient(inventory.GetCurrentObject().data.prefab, item.GetWeight());
 
+                    if (status == 0)
+                        inventory.RemoveFromCurrentSlot();
+
+                }
             }
+            
         }
-        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject().tag == "Form")
+        if (Input.GetMouseButton(0))
+        { 
+            Debug.Log("Dodanie obiektu" + currentInteractable + " test " + inventory.GetCurrentObject().data.prefab);
+        }
+
+        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject().data.prefab != null && inventory.GetCurrentObject().data.prefab.tag == "Form")
         {
             Debug.Log("Dodanie obiektu");
-            Forma forma = inventory.GetCurrentObject().GetComponent<Forma>();
-            if (forma != null)
-            {
-                Debug.Log("Zabranie betonu z betoniarki: "+ inventory.GetCurrentObject() + "Czy forma jest pusta: "+ forma.isEmptyForm());
-                if (forma.isEmptyForm() == true) {
+            bool isEmpty = inventory.GetCurrentObject().data.isEmpty;
+
+                Debug.Log("Zabranie betonu z betoniarki: "+ inventory.GetCurrentObject() + "Czy forma jest pusta: "+ isEmpty);
+                if (isEmpty == true) {
                     int status = currentInteractable.GetConcerte(25);
 
                     if (status == 0)
-                        forma.setIsEmpty(false);
+                    inventory.GetCurrentObject().data.isEmpty = false;
                 }
-
-            }
         }
             
 

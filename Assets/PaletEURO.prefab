@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614f84b5fea3203408075588ea29a0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cementBagPrefab: {fileID: 7822111364862138786, guid: 7074da140a9a42c4593860b6787f0f3a, type: 3}
+  itemPrefab: {fileID: 0}
   bagsParent: {fileID: 7652754871894049847}
 --- !u!4 &5547459063859262815 stripped
 Transform:

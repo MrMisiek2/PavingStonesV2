@@ -29,14 +29,16 @@ public class MousePalletInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDistance, palletLayer))
         {
             PaletEUROccupancy pallet = hit.collider.GetComponentInParent<PaletEUROccupancy>();
-
-            if (pallet != null && inventory.GetCurrentObject() == null)
+            Debug.Log("Palete hit take" + pallet);
+            if (pallet != null && inventory.GetCurrentObject().data == null)
             {
-                GameObject bagPrefab = pallet.TakeBag();
+                //To zabiera worek palety
+                ItemData bagPrefab = pallet.TakeBag();
 
                 if (bagPrefab != null)
                 {
-                    inventory.AddToCurrentSlot(bagPrefab);
+                    //To dodaje worek do inventory
+                    inventory.AddItemToSlot(bagPrefab, 1);
                 }
             }
         }
@@ -50,11 +52,10 @@ public class MousePalletInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDistance, palletLayer))
         {
             PaletEUROccupancy pallet = hit.collider.GetComponentInParent<PaletEUROccupancy>();
-
-            if (pallet != null && inventory.GetCurrentObject() != null)
+            if (pallet != null && inventory.GetCurrentObject().data != null)
             {
-                GameObject bagPrefab = pallet.AddBag(inventory.GetCurrentObject());
-                
+                ItemData bagPrefab = pallet.AddBag(inventory.GetCurrentObject().data);
+
                 if (bagPrefab != null)
                 {
                     Debug.Log("Hello", bagPrefab);

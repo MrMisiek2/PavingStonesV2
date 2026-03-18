@@ -11,10 +11,12 @@ public class GridBuildSystem : MonoBehaviour
     public Image demolishProgressBar;
 
     [Header("Build Prefabs (9 Slots)")]
-    public GameObject[] buildPrefabs = new GameObject[9];
+    //public GameObject[] buildPrefabs = new GameObject[9];
+    public InventoryItem[] items = new InventoryItem[9];
 
     [Header("Slot Prefabs (9 Slots)")]
     public GameObject[] slotsPrefabs = new GameObject[9];
+
 
     [Header("Grid Settings")]
     public float gridSize = 1f;
@@ -36,12 +38,12 @@ public class GridBuildSystem : MonoBehaviour
     private float demolishTimer = 0f;
 
     [Header("Obiekty do generowania")]
-    public GameObject SandBag;
-    public GameObject CementBag;
-    public GameObject EmptyPallete;
-    public GameObject EmptyBucket;
-    public GameObject BucketOfWater;
-    public GameObject EmptyForm;
+    public ItemData SandBag;
+    public ItemData CementBag;
+    public ItemData EmptyPallete;
+    public ItemData EmptyBucket;
+    public ItemData BucketOfWater;
+    public ItemData EmptyForm;
 
 
 
@@ -58,7 +60,7 @@ public class GridBuildSystem : MonoBehaviour
         HandleItemSpawnInInventory();
         HandleSlotChange();
         HandleRotation();
-        UpdatePreview();
+        //UpdatePreview();
         HandleInput();
         UpdateDemolishUI();
         //UpdateVisualGrid();
@@ -68,8 +70,8 @@ public class GridBuildSystem : MonoBehaviour
     void HandleSlotChange()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll > 0f) currentSlot = (currentSlot + 1) % buildPrefabs.Length;
-        if (scroll < 0f) currentSlot = (currentSlot - 1 + buildPrefabs.Length) % buildPrefabs.Length;
+        if (scroll > 0f) currentSlot = (currentSlot + 1) % items.Length;
+        if (scroll < 0f) currentSlot = (currentSlot - 1 + items.Length) % items.Length;
 
         if (previewObject != null)
         {
@@ -87,12 +89,19 @@ public class GridBuildSystem : MonoBehaviour
 
     void HandleItemSpawnInInventory()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1)) buildPrefabs[currentSlot] = SandBag;
-        if (Input.GetKeyDown(KeyCode.Keypad2)) buildPrefabs[currentSlot] = CementBag;
-        if (Input.GetKeyDown(KeyCode.Keypad3)) buildPrefabs[currentSlot] = EmptyPallete;
-        if (Input.GetKeyDown(KeyCode.Keypad4)) buildPrefabs[currentSlot] = EmptyBucket;
-        if (Input.GetKeyDown(KeyCode.Keypad5)) buildPrefabs[currentSlot] = BucketOfWater;
-        if (Input.GetKeyDown(KeyCode.Keypad6)) buildPrefabs[currentSlot] = EmptyForm;
+        if (Input.GetKeyDown(KeyCode.Keypad1)) AddItemToSlot(SandBag, 1);
+        if (Input.GetKeyDown(KeyCode.Keypad2)) AddItemToSlot(CementBag, 1);
+        if (Input.GetKeyDown(KeyCode.Keypad3)) AddItemToSlot(EmptyPallete, 1);
+        if (Input.GetKeyDown(KeyCode.Keypad4)) AddItemToSlot(EmptyBucket, 1);
+        if (Input.GetKeyDown(KeyCode.Keypad5)) AddItemToSlot(BucketOfWater, 1);
+        if (Input.GetKeyDown(KeyCode.Keypad6)) AddItemToSlot(EmptyForm, 1);
+
+        //if (Input.GetKeyDown(KeyCode.Keypad1)) buildPrefabs[currentSlot] = SandBag;
+        //if (Input.GetKeyDown(KeyCode.Keypad2)) buildPrefabs[currentSlot] = CementBag;
+        //if (Input.GetKeyDown(KeyCode.Keypad3)) buildPrefabs[currentSlot] = EmptyPallete;
+        //if (Input.GetKeyDown(KeyCode.Keypad4)) buildPrefabs[currentSlot] = EmptyBucket;
+        //if (Input.GetKeyDown(KeyCode.Keypad5)) buildPrefabs[currentSlot] = BucketOfWater;
+        //if (Input.GetKeyDown(KeyCode.Keypad6)) buildPrefabs[currentSlot] = EmptyForm;
     }
 
 
@@ -101,7 +110,12 @@ public class GridBuildSystem : MonoBehaviour
     {
 
         //Aktualizacja wybranego slotu
-        GameObject currentPrefab = buildPrefabs[currentSlot];
+        //GameObject currentPrefab = buildPrefabs[currentSlot];
+        InventoryItem currentItem = items[currentSlot];
+        if (currentItem.data.prefab == null) { DestroyPreview(); return; }
+
+        GameObject currentPrefab = currentItem.data.prefab;
+
 
         for (int i = 0; i < 9; i++)
         {
@@ -175,13 +189,18 @@ public class GridBuildSystem : MonoBehaviour
         if (previewObject == null) return;
         if (previewObject.tag != "Buildable" && previewObject.tag != "Placable" && previewObject.tag != "Form") return;
 
+        InventoryItem currentItem = items[currentSlot];
+        if (currentItem == null) return;
+
         Vector3 pos = previewObject.transform.position;
         Vector2Int cell = WorldToCell(pos);
 
         // Stawianie
         if (Input.GetMouseButtonDown(0) && canPlace)
         {
-            GameObject obj = Instantiate(buildPrefabs[currentSlot], pos, previewObject.transform.rotation);
+            //GameObject obj = Instantiate(buildPrefabs[currentSlot], pos, previewObject.transform.rotation);
+            GameObject obj = Instantiate(currentItem.data.prefab, pos, previewObject.transform.rotation);
+
             occupiedCells.Add(cell);
             RemoveFromCurrentSlot();
         }
@@ -375,9 +394,9 @@ public class GridBuildSystem : MonoBehaviour
         }
     }
 
-    public bool AddToCurrentSlot(GameObject itemPrefab)
+    public bool AddToCurrentSlot(ItemData itemData)
     {
-        if (buildPrefabs[currentSlot] != null)
+        if (items[currentSlot] != null)
             return false; // slot zajęty
 
         //if (slotsPrefabs[currentSlot] == null)
@@ -388,14 +407,14 @@ public class GridBuildSystem : MonoBehaviour
         //item.transform.localRotation = Quaternion.identity;
         //item.transform.localScale = Vector3.one * 0.6f;
 
-        buildPrefabs[currentSlot] = itemPrefab;
+        AddItemToSlot(itemData, 1);
 
         return true;
     }
 
     public bool RemoveFromCurrentSlot()
     {
-        if (buildPrefabs[currentSlot] == null)
+        if (items[currentSlot] == null)
             return false; // slot wolny
 
         //if (slotsPrefabs[currentSlot] == null)
@@ -406,14 +425,14 @@ public class GridBuildSystem : MonoBehaviour
         //item.transform.localRotation = Quaternion.identity;
         //item.transform.localScale = Vector3.one * 0.6f;
 
-        buildPrefabs[currentSlot] = null;
+        items[currentSlot] = null;
 
         return true;
     }
 
-    public GameObject GetCurrentObject()
+    public InventoryItem GetCurrentObject()
     {
-        return buildPrefabs[currentSlot];
+        return items[currentSlot];
     }
 
     Vector3 GetMouseWorldPosition()
@@ -427,5 +446,14 @@ public class GridBuildSystem : MonoBehaviour
         }
 
         return Vector3.zero;
+    }
+
+    public void AddItemToSlot(ItemData data, int amount)
+    {
+        items[currentSlot] = new InventoryItem
+        {
+            data = data,
+            amount = amount
+        };
     }
 }
