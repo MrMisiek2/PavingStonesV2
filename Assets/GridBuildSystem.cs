@@ -116,6 +116,7 @@ public class GridBuildSystem : MonoBehaviour
         //Aktualizacja wybranego slotu
         //GameObject currentPrefab = buildPrefabs[currentSlot];
         InventoryItem currentItem = items[currentSlot];
+        if (currentItem == null) { DestroyPreview(); return; }
         if (currentItem.data == null) { DestroyPreview(); return; }
 
         GameObject currentPrefab = currentItem.data.prefab;
@@ -170,30 +171,34 @@ public class GridBuildSystem : MonoBehaviour
     // --- INPUT ---
     void HandleInput()
     {
+        InventoryItem currentItem = items[currentSlot];
+
         // USUWANIE – działa ZAWSZE
-        if (Input.GetMouseButton(1))
-        {
-            Vector3 pos2 = GetMouseWorldPosition(); // <- ważne!
-            Vector2Int cell2 = WorldToCell(pos2);
-
-            if (occupiedCells.Contains(cell2))
+        if (currentItem != null) {
+            if (Input.GetMouseButton(1) && currentItem.data == null)
             {
-                demolishTimer += Time.deltaTime;
+                Vector3 pos2 = GetMouseWorldPosition(); // <- ważne!
+                Vector2Int cell2 = WorldToCell(pos2);
 
-                if (demolishTimer >= demolishHoldTime)
+                if (occupiedCells.Contains(cell2))
                 {
-                    RemoveObjectAtCell(cell2);
-                    demolishTimer = 0f;
+                    demolishTimer += Time.deltaTime;
+
+                    if (demolishTimer >= demolishHoldTime)
+                    {
+                        RemoveObjectAtCell(cell2);
+                        demolishTimer = 0f;
+                    }
                 }
+                else demolishTimer = 0f;
             }
             else demolishTimer = 0f;
         }
-        else demolishTimer = 0f;
 
         if (previewObject == null) return;
         if (previewObject.tag != "Buildable" && previewObject.tag != "Placable" && previewObject.tag != "Form") return;
 
-        InventoryItem currentItem = items[currentSlot];
+        
         if (currentItem == null) return;
 
         Vector3 pos = previewObject.transform.position;
@@ -279,11 +284,7 @@ public class GridBuildSystem : MonoBehaviour
             }
         }
 
-        if (toRemove != null)
-        {
-            Destroy(toRemove);
-            occupiedCells.Remove(cell);
-        }
+        
 
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Form"))
         {
@@ -299,7 +300,9 @@ public class GridBuildSystem : MonoBehaviour
 
         if (toRemove != null)
         {
-            Destroy(toRemove);
+            WorldItem worldItem = toRemove.GetComponent<WorldItem>();
+            items[currentSlot] = worldItem.item;
+            Destroy(worldItem.gameObject);
             occupiedCells.Remove(cell);
         }
 

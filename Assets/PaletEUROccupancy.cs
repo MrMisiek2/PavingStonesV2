@@ -1,14 +1,15 @@
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class PaletEUROccupancy : MonoBehaviour
 {
-    [SerializeField] private ItemData itemPrefab;
+    [SerializeField] private ItemData worldItemPrefab;
     [SerializeField] private Transform bagsParent;
 
     private int maxLayers = 8;
     private int bagsPerLayer = 8;
 
-    private int currentBags = 0;
+    [SerializeField] private int currentBags = 0;
 
     private float bagHeight = 0.10f;
     private float bagSpacing = 0.3f;
@@ -21,13 +22,21 @@ public class PaletEUROccupancy : MonoBehaviour
         //    AddBag();
     }
 
-    public ItemData AddBag(ItemData newBagPrefab)
+    public WorldItem AddBag(InventoryItem newBagInventoryItem)
     {
-        Debug.Log("instatntiate" + itemPrefab + "test " + newBagPrefab);
-        if (newBagPrefab != itemPrefab && itemPrefab != null ) return null;
+        //Debug.Log("instatntiate" + worldItemPrefab.item.data.prefab + "test " + newBagInventoryItem);
+        if  (worldItemPrefab != null )
+        {
+            Debug.Log("" + worldItemPrefab);
+            Debug.Log("" + newBagInventoryItem);
+            if (newBagInventoryItem.data != worldItemPrefab) return null;
+        }
         if (currentBags >= maxLayers * bagsPerLayer) return null;
 
-        itemPrefab = newBagPrefab;
+        Debug.Log("Dziala" + newBagInventoryItem);
+        if (worldItemPrefab == null)
+            worldItemPrefab = newBagInventoryItem.data;
+
         int layer = currentBags / bagsPerLayer;
         int indexInLayer = currentBags % bagsPerLayer;
 
@@ -37,11 +46,25 @@ public class PaletEUROccupancy : MonoBehaviour
             (indexInLayer / 4) * bagSpacingHeight
         );
 
-        GameObject bag = Instantiate(itemPrefab.prefab, bagsParent);
+
+        GameObject bag = Instantiate(newBagInventoryItem.data.prefab, bagsParent);
         bag.transform.localPosition = position;
+        WorldItem worldItem = bag.GetComponent<WorldItem>();
+        worldItem.Initialize(newBagInventoryItem);
+        Debug.Log("Dziala" + bag);
+        worldItem.item.amount = 1;
+
+        //worldItemPrefab = bag.GetComponent<WorldItem>();
+        //Debug.Log("worldItem" + worldItemPrefab);
+        //worldItemPrefab.Initialize(newBagInventoryItem);
+
+        //worldItemPrefab = worldItem;
+
+        //GameObject bag = Instantiate(worldItemPrefab.item.data.prefab, bagsParent);
+        //bag.transform.localPosition = position;
 
         currentBags++;
-        return itemPrefab;
+        return worldItem;
     }
 
     //public void AddBag() //Dodaj worek na paletê
@@ -62,15 +85,25 @@ public class PaletEUROccupancy : MonoBehaviour
             return null;
 
         Transform lastBag = bagsParent.GetChild(bagsParent.childCount - 1);
-        Destroy(lastBag.gameObject);
+        WorldItem worldItem = lastBag.GetComponent<WorldItem>();
+        Destroy(worldItem.gameObject); 
+        
+        //Destroy(lastBag.gameObject);
 
         currentBags--;
 
-        return itemPrefab;
+        return worldItemPrefab;
     }
 
     public int GetCurrentBags()
     {
         return currentBags;
+    }
+    public void Update()
+    {
+        if (currentBags == 0)
+        {
+            worldItemPrefab = null;
+        }
     }
 }

@@ -185,6 +185,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 10f2bfeafe221bf428f6e3dcd79685ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: -3603723713008594594}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 10f2bfeafe221bf428f6e3dcd79685ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6202526253033747779}
   m_SourcePrefab: {fileID: 100100000, guid: 10f2bfeafe221bf428f6e3dcd79685ed, type: 3}
 --- !u!4 &5799881196151143338 stripped
 Transform:
@@ -229,4 +232,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c35f2c1863f724bbccae134ef818b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormaHollandScript
+  isEmpty: 1
+  isDry: 0
   infill: {fileID: 3088875372584966970}
+--- !u!114 &-6202526253033747779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6572583181512220944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24127876d0f510049bca08d4d0f20b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldItem
+  item:
+    data: {fileID: 0}
+    amount: 0
+    durability: 0
+    isEmpty: 0

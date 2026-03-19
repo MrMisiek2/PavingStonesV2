@@ -11,21 +11,23 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
-        isEmpty = true;
-        Debug.Log("Is empty form: " + isEmpty);
-    }
+    {}
 
     // Update is called once per frame
     void Update()
     {
-        if( isEmpty == true)
+
+        WorldItem worldItem = GetComponent<WorldItem>();
+        if (worldItem != null)
         {
-            infill.SetActive(false);
-        }
-        else
-        {
-            infill.SetActive(true);
+            if (worldItem.item.isEmpty == true)
+            {
+                infill.SetActive(false);
+            }
+            else
+            {
+                infill.SetActive(true);
+            }
         }
     }
     public string GetName()

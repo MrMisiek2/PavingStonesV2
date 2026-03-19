@@ -74,12 +74,13 @@
     <Compile Include="Assets\TileGeneratorScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Obiekty\Formy\FormaHollandScript.cs" />
+    <Compile Include="Assets\Obiekty\Cement\Bag.cs" />
     <Compile Include="Assets\PlayerInteraction.cs" />
     <Compile Include="Assets\GridBuildSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-    <Compile Include="Assets\IInteractable.cs" />
     <Compile Include="Assets\WorldItem.cs" />
+    <Compile Include="Assets\IInteractable.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />

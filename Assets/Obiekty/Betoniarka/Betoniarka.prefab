@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 4305138249595669608}
   - component: {fileID: 1231220488221951470}
   - component: {fileID: 915994424333808225}
+  - component: {fileID: 6062988140364151268}
   m_Layer: 7
   m_Name: Betoniarka
   m_TagString: Buildable
@@ -621,6 +622,7 @@ MonoBehaviour:
   isReady: 0
   infill: {fileID: 2227788167061263658}
   infillAmmount: 0
+  concerteAmmount: 0
   MixingStatus: {fileID: 7475490754007872840}
   mixingProgressBar: {fileID: 4468727682829585139}
   mixingProgressBarBackground: {fileID: 1558835087992954370}
@@ -631,6 +633,23 @@ MonoBehaviour:
     amount: 150
   - name: Cement
     amount: 50
+--- !u!114 &6062988140364151268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189179858025997061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24127876d0f510049bca08d4d0f20b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldItem
+  item:
+    data: {fileID: 0}
+    amount: 0
+    durability: 0
+    isEmpty: 0
 --- !u!1 &5337041966088429400
 GameObject:
   m_ObjectHideFlags: 0

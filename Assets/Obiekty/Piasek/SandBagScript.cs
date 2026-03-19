@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SandBagScript : MonoBehaviour, IItem
+public class SandBagScript : MonoBehaviour, IItem,Bag
 {
     private float weight =25f;
     private string ingridiendName = "Piasek";

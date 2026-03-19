@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CementBagScript : MonoBehaviour, IItem
+public class CementBagScript : MonoBehaviour, IItem, Bag
 {
     private float weight =25f;
     private string ingridiendName = "Cement";

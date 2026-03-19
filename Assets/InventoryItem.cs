@@ -31,22 +31,20 @@ public class InventoryItem
     {
         if (item == null) return;
 
-        if (isEmpty==true)
+        Forma forma = item.data.prefab.GetComponent<Forma>();
+        if (forma != null)
         {
-            Forma forma = item.data.prefab.GetComponent<Forma>();
-            if (forma != null)
+            if (item.isEmpty)
             {
-                if (item.isEmpty)
-                {
-                    forma.setIsEmpty(false);
-                }
-                else
-                {
-                    forma.setIsEmpty(true);
-                }
+                forma.setIsEmpty(true);
             }
-
+            else
+            {
+                forma.setIsEmpty(false);
+            }
         }
+
+        
     }
 
 
