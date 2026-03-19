@@ -60,7 +60,7 @@ public class GridBuildSystem : MonoBehaviour
         HandleItemSpawnInInventory();
         HandleSlotChange();
         HandleRotation();
-        //UpdatePreview();
+        UpdatePreview();
         HandleInput();
         UpdateDemolishUI();
         //UpdateVisualGrid();
@@ -94,7 +94,11 @@ public class GridBuildSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Keypad3)) AddItemToSlot(EmptyPallete, 1);
         if (Input.GetKeyDown(KeyCode.Keypad4)) AddItemToSlot(EmptyBucket, 1);
         if (Input.GetKeyDown(KeyCode.Keypad5)) AddItemToSlot(BucketOfWater, 1);
-        if (Input.GetKeyDown(KeyCode.Keypad6)) AddItemToSlot(EmptyForm, 1);
+        if (Input.GetKeyDown(KeyCode.Keypad6))
+        {
+            AddItemToSlot(EmptyForm, 1);
+            SetItemEmpty(items[currentSlot], true);
+        }
 
         //if (Input.GetKeyDown(KeyCode.Keypad1)) buildPrefabs[currentSlot] = SandBag;
         //if (Input.GetKeyDown(KeyCode.Keypad2)) buildPrefabs[currentSlot] = CementBag;
@@ -112,7 +116,7 @@ public class GridBuildSystem : MonoBehaviour
         //Aktualizacja wybranego slotu
         //GameObject currentPrefab = buildPrefabs[currentSlot];
         InventoryItem currentItem = items[currentSlot];
-        if (currentItem.data.prefab == null) { DestroyPreview(); return; }
+        if (currentItem.data == null) { DestroyPreview(); return; }
 
         GameObject currentPrefab = currentItem.data.prefab;
 
@@ -200,9 +204,12 @@ public class GridBuildSystem : MonoBehaviour
         {
             //GameObject obj = Instantiate(buildPrefabs[currentSlot], pos, previewObject.transform.rotation);
             GameObject obj = Instantiate(currentItem.data.prefab, pos, previewObject.transform.rotation);
+            WorldItem worldItem = obj.GetComponent<WorldItem>();
+            worldItem.Initialize(currentItem);
 
             occupiedCells.Add(cell);
             RemoveFromCurrentSlot();
+
         }
 
         // Usuwanie
@@ -456,4 +463,10 @@ public class GridBuildSystem : MonoBehaviour
             amount = amount
         };
     }
+
+    public void SetItemEmpty(InventoryItem data, bool isEmpty)
+    {
+        data.isEmpty = isEmpty;
+    }
+
 }

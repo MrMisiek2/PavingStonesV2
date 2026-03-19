@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -22,8 +22,9 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable.Interact();
         }
 
-        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject().data.prefab != null )
+        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject().data != null)
         {
+            
             if(inventory.GetCurrentObject().data.prefab.tag != "Form")
             {
                 IItem item = inventory.GetCurrentObject().data.prefab.GetComponent<IItem>();
@@ -33,29 +34,37 @@ public class PlayerInteraction : MonoBehaviour
                     int status = currentInteractable.AddIngredient(inventory.GetCurrentObject().data.prefab, item.GetWeight());
 
                     if (status == 0)
+                    {
                         inventory.RemoveFromCurrentSlot();
+
+                    }
 
                 }
             }
             
         }
-        if (Input.GetMouseButton(0))
-        { 
-            Debug.Log("Dodanie obiektu" + currentInteractable + " test " + inventory.GetCurrentObject().data.prefab);
-        }
+        //if (Input.GetMouseButton(0))
+        //{ 
+        //    Debug.Log("Dodanie obiektu" + currentInteractable + " test " + inventory.GetCurrentObject().data.prefab);
+        //}
 
-        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject().data.prefab != null && inventory.GetCurrentObject().data.prefab.tag == "Form")
+        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject().data != null)
         {
-            Debug.Log("Dodanie obiektu");
-            bool isEmpty = inventory.GetCurrentObject().data.isEmpty;
+            if (inventory.GetCurrentObject().data.prefab.tag == "Form")
+            {
+                //Debug.Log("Dodanie obiektu");
+                bool isEmpty = inventory.GetCurrentObject().isEmpty;
 
-                Debug.Log("Zabranie betonu z betoniarki: "+ inventory.GetCurrentObject() + "Czy forma jest pusta: "+ isEmpty);
-                if (isEmpty == true) {
+                Debug.Log("Zabranie betonu z betoniarki: " + inventory.GetCurrentObject().data + "Czy forma jest pusta: " + isEmpty);
+                if (isEmpty == true)
+                {
                     int status = currentInteractable.GetConcerte(25);
 
                     if (status == 0)
-                    inventory.GetCurrentObject().data.isEmpty = false;
+                        inventory.GetCurrentObject().isEmpty = false;
                 }
+            }
+            
         }
             
 
