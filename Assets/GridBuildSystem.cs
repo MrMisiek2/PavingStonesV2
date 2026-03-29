@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GridBuildSystem : MonoBehaviour
@@ -174,8 +174,10 @@ public class GridBuildSystem : MonoBehaviour
         InventoryItem currentItem = items[currentSlot];
 
         // USUWANIE – działa ZAWSZE
-        if (currentItem != null) {
-            if (Input.GetMouseButton(1) && currentItem.data == null)
+        //Debug.Log("items[currentSlot]" + items[currentSlot]);
+        if (currentItem.data == null)
+        {
+            if (Input.GetMouseButton(1))
             {
                 Vector3 pos2 = GetMouseWorldPosition(); // <- ważne!
                 Vector2Int cell2 = WorldToCell(pos2);
@@ -435,14 +437,14 @@ public class GridBuildSystem : MonoBehaviour
         //item.transform.localRotation = Quaternion.identity;
         //item.transform.localScale = Vector3.one * 0.6f;
 
-        items[currentSlot] = null;
+        items[currentSlot] = new InventoryItem();
 
         return true;
     }
 
-    public InventoryItem GetCurrentObject()
+    public ItemData GetCurrentObject()
     {
-        return items[currentSlot];
+        return items[currentSlot].data;
     }
 
     Vector3 GetMouseWorldPosition()
