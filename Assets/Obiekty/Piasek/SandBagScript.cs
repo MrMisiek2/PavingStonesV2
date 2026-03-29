@@ -1,13 +1,19 @@
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class SandBagScript : MonoBehaviour, IItem,Bag
 {
+    public TextMeshProUGUI objectName;
+    public TextMeshProUGUI objectAmmount; 
+    
     private float weight =25f;
     private string ingridiendName = "Piasek";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        objectName.text = GetName();
+        objectAmmount.text = GetWeight().ToString() + " kg";
     }
 
     // Update is called once per frame

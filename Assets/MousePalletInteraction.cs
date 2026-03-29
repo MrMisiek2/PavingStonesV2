@@ -58,11 +58,11 @@ public class MousePalletInteraction : MonoBehaviour
             PaletEUROccupancy pallet = hit.collider.GetComponentInParent<PaletEUROccupancy>();
             if (pallet != null && inventory.GetCurrentObject() != null)
             {
-                if (inventory.GetCurrentObject().data != null)
+                if (inventory.GetCurrentObject().prefab != null)
                 {
-                    if (inventory.GetCurrentObject().data.prefab.GetComponent<Bag>() != null)
+                    if (inventory.GetCurrentObject().prefab.GetComponent<Bag>() != null)
                     {
-                        WorldItem bagWorldItemPrefab = pallet.AddBag(inventory.GetCurrentObject());
+                        WorldItem bagWorldItemPrefab = pallet.AddBag(inventory.GetCurrentInventoryItem());
 
                         if (bagWorldItemPrefab != null)
                         {

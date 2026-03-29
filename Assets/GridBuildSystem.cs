@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using NUnit.Framework.Constraints;
+using System.Collections.Generic;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +10,8 @@ public class GridBuildSystem : MonoBehaviour
     public Camera playerCamera;
     public LayerMask buildSurface;
     public Canvas uiCanvas;
-    public Image demolishProgressBar;
+    public Image demolishProgressBar; 
+    public LayerMask buildBlockers; //Maski które da się postawić na mapie 
 
     [Header("Build Prefabs (9 Slots)")]
     //public GameObject[] buildPrefabs = new GameObject[9];
@@ -19,7 +22,7 @@ public class GridBuildSystem : MonoBehaviour
 
 
     [Header("Grid Settings")]
-    public float gridSize = 1f;
+    public float gridSize = 0.5f;
     public float buildDistance = 6f;
     public float rotationStep = 90f;
 
@@ -30,6 +33,7 @@ public class GridBuildSystem : MonoBehaviour
     public GameObject gridTilePrefab; // mały kwadrat z półprzezroczystym materiałem
 
     private int currentSlot = 0;
+    private int previousSlot = 0;
     private GameObject previewObject;
     private HashSet<Vector2Int> occupiedCells = new HashSet<Vector2Int>();
     private bool canPlace;
@@ -70,10 +74,19 @@ public class GridBuildSystem : MonoBehaviour
     void HandleSlotChange()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll > 0f) currentSlot = (currentSlot + 1) % items.Length;
-        if (scroll < 0f) currentSlot = (currentSlot - 1 + items.Length) % items.Length;
+        if (scroll > 0f) 
+        {
+            previousSlot = currentSlot;
+            currentSlot = (currentSlot + 1) % items.Length; 
+        }
 
-        if (previewObject != null)
+        if (scroll < 0f)
+        {
+            previousSlot = currentSlot;
+            currentSlot = (currentSlot - 1 + items.Length) % items.Length;
+        }
+
+        if (previewObject != null && scroll != 0f)
         {
             Destroy(previewObject);
             previewObject = null;
@@ -115,6 +128,12 @@ public class GridBuildSystem : MonoBehaviour
 
         //Aktualizacja wybranego slotu
         //GameObject currentPrefab = buildPrefabs[currentSlot];
+        if (currentSlot != previousSlot && previewObject != null)
+        {
+            previousSlot = currentSlot;
+            Destroy(previewObject);
+            previewObject = null;
+        }
         InventoryItem currentItem = items[currentSlot];
         if (currentItem == null) { DestroyPreview(); return; }
         if (currentItem.data == null) { DestroyPreview(); return; }
@@ -152,15 +171,48 @@ public class GridBuildSystem : MonoBehaviour
         Vector3 snappedPos = SnapToGrid(hit.point);
         Vector2Int cell = WorldToCell(snappedPos);
 
-        canPlace = !occupiedCells.Contains(cell);
+        //rezygnuje, bo nie chcę tego oznaczać 
+        //canPlace = !occupiedCells.Contains(cell);
 
+        
+
+       
         if (previewObject == null)
         {
             previewObject = Instantiate(currentPrefab);
             heightOffset = 0f; // CalculateHeightOffset(previewObject);
         }
 
-        //Debug.Log("currentRotationX: " + previewObject.transform.eulerAngles.x);
+        //Debug.Log("Hit w: "  + ", hit2: " + previewObject.GetEntityId());
+        Collider colliderB = previewObject.GetComponent<Collider>();
+
+        Collider[] hits = Physics.OverlapBox(
+            colliderB.bounds.center,
+            colliderB.bounds.extents,
+            colliderB.transform.rotation,
+            buildBlockers
+        );
+        bool overlap = false;
+
+        foreach (var hit2 in hits)
+        {
+            Debug.Log("Hit w: " + hit2.transform.root + ", hit2: " + previewObject.transform.root);
+            if (hit2.transform.root != previewObject.transform.root)
+            {
+                overlap = true;
+                break;
+            }
+        }
+
+        if (overlap)
+        {
+            canPlace = false;
+        }
+        else
+        {
+            canPlace = true;
+        }
+        Debug.Log("currentRotationX: " + previewObject.transform.eulerAngles.x);
         snappedPos.y += heightOffset;
         previewObject.transform.position = snappedPos;
         previewObject.transform.rotation = Quaternion.Euler(previewObject.transform.eulerAngles.x, currentRotation, 0f);
@@ -179,20 +231,50 @@ public class GridBuildSystem : MonoBehaviour
         {
             if (Input.GetMouseButton(1))
             {
-                Vector3 pos2 = GetMouseWorldPosition(); // <- ważne!
-                Vector2Int cell2 = WorldToCell(pos2);
+                //Vector3 pos2 = GetMouseWorldPosition(); // <- ważne!
+                //Vector2Int cell2 = WorldToCell(pos2);
 
-                if (occupiedCells.Contains(cell2))
+                //if (occupiedCells.Contains(cell2))
+                //{
+                //    demolishTimer += Time.deltaTime;
+
+                //    if (demolishTimer >= demolishHoldTime)
+                //    {
+                //        RemoveObjectAtCell(cell2);
+                //        demolishTimer = 0f;
+                //    }
+                //}
+                //else demolishTimer = 0f;
+                Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+                //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, buildDistance))
                 {
-                    demolishTimer += Time.deltaTime;
+                    GameObject hitObject = hit.collider.transform.root.gameObject;
 
-                    if (demolishTimer >= demolishHoldTime)
+                    if (hitObject.CompareTag("Buildable") ||
+                        hitObject.CompareTag("Placable") ||
+                        hitObject.CompareTag("Form"))
                     {
-                        RemoveObjectAtCell(cell2);
+                        demolishTimer += Time.deltaTime;
+
+                        if (demolishTimer >= demolishHoldTime)
+                        {
+                            RemoveObject(hitObject);
+                            demolishTimer = 0f;
+                        }
+                    }
+                    else
+                    {
                         demolishTimer = 0f;
                     }
                 }
-                else demolishTimer = 0f;
+                else
+                {
+                    demolishTimer = 0f;
+                }
+
             }
             else demolishTimer = 0f;
         }
@@ -214,7 +296,7 @@ public class GridBuildSystem : MonoBehaviour
             WorldItem worldItem = obj.GetComponent<WorldItem>();
             worldItem.Initialize(currentItem);
 
-            occupiedCells.Add(cell);
+            //occupiedCells.Add(cell);
             RemoveFromCurrentSlot();
 
         }
@@ -242,14 +324,21 @@ public class GridBuildSystem : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            Vector3 pos = GetMouseWorldPosition();
-            Vector2Int cell = WorldToCell(SnapToGrid(pos));
+            Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+            RaycastHit hit;
 
-            if (occupiedCells.Contains(cell))
+            if (Physics.Raycast(ray, out hit, buildDistance))
             {
-                demolishProgressBar.fillAmount = Mathf.Clamp01(demolishTimer / demolishHoldTime);
-                demolishProgressBar.enabled = true;
-                return;
+                GameObject hitObject = hit.collider.transform.root.gameObject;
+
+                if (hitObject.CompareTag("Buildable") ||
+                    hitObject.CompareTag("Placable") ||
+                    hitObject.CompareTag("Form"))
+                {
+                    demolishProgressBar.fillAmount = Mathf.Clamp01(demolishTimer / demolishHoldTime);
+                    demolishProgressBar.enabled = true;
+                    return;
+                }
             }
         }
 
@@ -258,54 +347,17 @@ public class GridBuildSystem : MonoBehaviour
     }
 
     // --- REMOVE ---
-    void RemoveObjectAtCell(Vector2Int cell)
+    void RemoveObject(GameObject obj)
     {
-        GameObject toRemove = null;
 
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Buildable"))
+        if (obj == null) return;
+    
+        if (obj != null)
         {
-            Vector3 snappedPos = SnapToGrid(obj.transform.position);
-            Vector2Int objCell = WorldToCell(snappedPos);
-
-            if (objCell == cell)
-            {
-                toRemove = obj;
-                break;
-            }
-        }
-
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Placable"))
-        {
-            Vector3 snappedPos = SnapToGrid(obj.transform.position);
-            Vector2Int objCell = WorldToCell(snappedPos);
-
-            if (objCell == cell)
-            {
-                toRemove = obj;
-                break;
-            }
-        }
-
-        
-
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Form"))
-        {
-            Vector3 snappedPos = SnapToGrid(obj.transform.position);
-            Vector2Int objCell = WorldToCell(snappedPos);
-
-            if (objCell == cell)
-            {
-                toRemove = obj;
-                break;
-            }
-        }
-
-        if (toRemove != null)
-        {
-            WorldItem worldItem = toRemove.GetComponent<WorldItem>();
+            WorldItem worldItem = obj.GetComponent<WorldItem>();
             items[currentSlot] = worldItem.item;
             Destroy(worldItem.gameObject);
-            occupiedCells.Remove(cell);
+            //occupiedCells.Remove(cell);
         }
 
     }
@@ -437,6 +489,8 @@ public class GridBuildSystem : MonoBehaviour
         //item.transform.localRotation = Quaternion.identity;
         //item.transform.localScale = Vector3.one * 0.6f;
 
+        //czyścimy slota jeśli zmienił się na inny
+        previousSlot = -1;
         items[currentSlot] = new InventoryItem();
 
         return true;
@@ -445,6 +499,11 @@ public class GridBuildSystem : MonoBehaviour
     public ItemData GetCurrentObject()
     {
         return items[currentSlot].data;
+    }
+
+    public InventoryItem GetCurrentInventoryItem()
+    {
+        return items[currentSlot];
     }
 
     Vector3 GetMouseWorldPosition()
@@ -462,6 +521,7 @@ public class GridBuildSystem : MonoBehaviour
 
     public void AddItemToSlot(ItemData data, int amount)
     {
+        previousSlot = -1;
         items[currentSlot] = new InventoryItem
         {
             data = data,
