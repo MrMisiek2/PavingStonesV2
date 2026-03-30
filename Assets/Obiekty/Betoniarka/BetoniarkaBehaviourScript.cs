@@ -256,5 +256,6 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
             return -1;
 
     }
+    public float GetInteractTextSize() { return 24; }
 
 }

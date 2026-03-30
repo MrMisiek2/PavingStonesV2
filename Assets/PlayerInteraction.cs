@@ -1,5 +1,7 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -72,14 +74,17 @@ public class PlayerInteraction : MonoBehaviour
 
     void CheckForInteractable()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);  //new Ray(transform.position, transform.forward);
         RaycastHit hit;
+
+        Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.red);
+
 
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
             GameObject hitObject = hit.collider.gameObject;
-
+            Debug.Log("Hit w interactable");
 
 
             //Jeœli zmieniamy obiekt to wy³¹czamy podpowiedz
@@ -97,11 +102,12 @@ public class PlayerInteraction : MonoBehaviour
             {
                 currentObject = hitObject;
                 ToggleCanvas(currentObject, true);
-                
-                
 
+
+                
                 currentInteractable = interactable;
                 interactText.text = interactable.GetInteractText();
+                interactText.fontSize = interactable.GetInteractTextSize();
                 interactText.gameObject.SetActive(true);
                 return;
             }

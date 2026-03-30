@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class FormaHollandScript : MonoBehaviour, IItem, Forma
+public class FormaHollandScript : MonoBehaviour, IItem, Forma, IInteractable
 {
-    private float weight =25f;
+    private float weight = 25f;
     private string objectName = "Holland";
     [SerializeField] private bool isEmpty = true;
     [SerializeField] private bool isDrying = false;
@@ -40,7 +40,7 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma
             }
         }
         Debug.Log("Drying" + isEmpty + "previous" + previousEmptyState);
-        if (previousEmptyState != isEmpty && isEmpty == false)
+        if (previousEmptyState != isEmpty && isEmpty == false && !isReady)
         {
             Debug.Log("Drying");
             dryingTimer = 0f;
@@ -61,7 +61,7 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma
     {
         return weight;
     }
-    
+
     public void setIsDry(bool isDrying)
     {
         isDrying = this.isDrying;
@@ -77,11 +77,36 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma
         return isEmpty;
     }
     IEnumerator TurnOffAfterTime(float time)
-    { 
+    {
         yield return new WaitForSeconds(time);
         isDrying = false;
         Renderer r = infill.GetComponent<Renderer>();
         r.material.color = Color.red;
         isReady = true;
     }
+
+
+
+
+
+    //Nagranie interactable 
+    public void Interact() { }
+    public int AddIngredient(GameObject ingredientName, float amount) { return 0;}
+    public int GetConcerte(int ammount) { return 0; }
+    public string GetInteractText() 
+    {
+        if (isReady)
+        {
+            return "Zabierz kostkę";
+        }
+        else if (isDrying)
+        {
+            return "Suszenie";
+        }
+        else
+        {
+            return "Forma pusta";
+        }
+    }
+    public float GetInteractTextSize() { return 20; }
 }

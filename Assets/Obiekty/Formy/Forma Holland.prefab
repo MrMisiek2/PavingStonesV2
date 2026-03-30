@@ -169,6 +169,10 @@ PrefabInstance:
       value: Forma Holland
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 10f2bfeafe221bf428f6e3dcd79685ed, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10f2bfeafe221bf428f6e3dcd79685ed, type: 3}
       propertyPath: m_TagString
       value: Form
       objectReference: {fileID: 0}
@@ -233,7 +237,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormaHollandScript
   isEmpty: 1
-  isDry: 0
+  isDrying: 0
+  isReady: 0
+  previousEmptyState: 1
+  dryingTime: 15
   infill: {fileID: 3088875372584966970}
 --- !u!114 &-6202526253033747779
 MonoBehaviour:
