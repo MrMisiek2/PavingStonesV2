@@ -3,8 +3,11 @@
     "",
     "\\Assets",
     "\\Assets\\Obiekty",
-    "\\Assets\\Obiekty\\Betoniarka"
+    "\\Assets\\Obiekty\\Betoniarka",
+    "\\Assets\\Obiekty\\Cement",
+    "\\Assets\\Obiekty\\Formy",
+    "\\Assets\\Obiekty\\Piasek"
   ],
-  "SelectedNode": "\\Assets\\PlayerInteraction.cs",
+  "SelectedNode": "\\Assets\\PaletEUROccupancy.cs",
   "PreviewInSolutionExplorer": false
 }

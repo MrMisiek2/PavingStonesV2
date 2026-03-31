@@ -6,14 +6,14 @@ public class PaletEUROccupancy : MonoBehaviour
     [SerializeField] private ItemData worldItemPrefab;
     [SerializeField] private Transform bagsParent;
 
-    private int maxLayers = 8;
     private int bagsPerLayer = 8;
 
     [SerializeField] private int currentBags = 0;
 
-    private float bagHeight = 0.10f;
-    private float bagSpacing = 0.3f;
-    private float bagSpacingHeight = 0.45f;
+    private float bagHeight;
+
+    private float paletteLength = 0.8f;
+    private float paletteWidth = 1.2f;
 
     private void Start()
     {
@@ -31,9 +31,14 @@ public class PaletEUROccupancy : MonoBehaviour
             Debug.Log("" + newBagInventoryItem);
             if (newBagInventoryItem.data != worldItemPrefab) return null;
         }
-        if (currentBags >= maxLayers * bagsPerLayer) return null;
 
-        Debug.Log("Dziala" + newBagInventoryItem);
+        //Debug.Log( "Szer "+ ((paletteLength + (0.45 * newBagInventoryItem.data.length)) / newBagInventoryItem.data.length) + "D³ug " + ((paletteWidth + (0.45 * newBagInventoryItem.data.width)) / newBagInventoryItem.data.width));
+        bagHeight = newBagInventoryItem.data.height;
+        int bagsPerLayerWidth = (int)((paletteWidth + (0.45 * newBagInventoryItem.data.width)) / newBagInventoryItem.data.width);
+        int bagsPerLayerLength = (int)((paletteLength + (0.45 * newBagInventoryItem.data.length)) / newBagInventoryItem.data.length);
+        bagsPerLayer = bagsPerLayerWidth * bagsPerLayerLength;
+
+        //Debug.Log("Dziala" + newBagInventoryItem);
         if (worldItemPrefab == null)
             worldItemPrefab = newBagInventoryItem.data;
 
@@ -41,9 +46,9 @@ public class PaletEUROccupancy : MonoBehaviour
         int indexInLayer = currentBags % bagsPerLayer;
 
         Vector3 position = new Vector3(
-            (indexInLayer % 4) * bagSpacing,
+            ((indexInLayer % bagsPerLayerWidth) * newBagInventoryItem.data.width + 0.5f * newBagInventoryItem.data.width - 0.5f* (bagsPerLayerWidth * newBagInventoryItem.data.width - paletteWidth)),
             layer * bagHeight,
-            (indexInLayer / 4) * bagSpacingHeight
+            ((indexInLayer / bagsPerLayerWidth) * newBagInventoryItem.data.length + 0.5f * newBagInventoryItem.data.length - 0.5f * (bagsPerLayerLength * newBagInventoryItem.data.length - paletteLength))
         );
 
 

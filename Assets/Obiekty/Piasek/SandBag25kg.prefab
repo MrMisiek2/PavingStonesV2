@@ -174,7 +174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.016033, y: 0.000000007450581}
+  m_AnchoredPosition: {x: 0.00005, y: -0}
   m_SizeDelta: {x: 0.45, y: 0.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3703562728427251748
@@ -387,7 +387,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 082e361080c4f4447bbb37f3d3d3daf4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 082e361080c4f4447bbb37f3d3d3daf4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -484,7 +484,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.004999999, y: 0.0029999996, z: 0.0010000003}
-  m_Center: {x: -0.015983349, y: 0, z: 0.00052114605}
+  m_Center: {x: 0, y: 0, z: 0.0005}
 --- !u!114 &9131598218067265510
 MonoBehaviour:
   m_ObjectHideFlags: 0

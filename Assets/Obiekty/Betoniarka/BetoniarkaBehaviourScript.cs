@@ -258,4 +258,9 @@ public class BetoniarkaBehaviourScript : MonoBehaviour,IInteractable
     }
     public float GetInteractTextSize() { return 24; }
 
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
+
 }

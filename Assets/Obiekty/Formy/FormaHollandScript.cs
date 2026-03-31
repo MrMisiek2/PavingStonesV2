@@ -10,6 +10,9 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma, IInteractable
     [SerializeField] private bool isReady = false;
     [SerializeField] private bool previousEmptyState = true;
     private float dryingTimer = 0f;
+    public ItemData product;
+    private float ammountOfProduct;
+
     [SerializeField] private float dryingTime = 15f;
     //private bool isEmpty = true;
 
@@ -39,10 +42,10 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma, IInteractable
                 setIsEmpty(false);
             }
         }
-        Debug.Log("Drying" + isEmpty + "previous" + previousEmptyState);
+        //Debug.Log("Drying" + isEmpty + "previous" + previousEmptyState);
         if (previousEmptyState != isEmpty && isEmpty == false && !isReady)
         {
-            Debug.Log("Drying");
+            //Debug.Log("Drying");
             dryingTimer = 0f;
             isDrying = true;
         }
@@ -83,6 +86,7 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma, IInteractable
         Renderer r = infill.GetComponent<Renderer>();
         r.material.color = Color.red;
         isReady = true;
+        ammountOfProduct = 6;
     }
 
 
@@ -109,4 +113,23 @@ public class FormaHollandScript : MonoBehaviour, IItem, Forma, IInteractable
         }
     }
     public float GetInteractTextSize() { return 20; }
+
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
+
+    public ItemData GetProduct()
+    {
+        return product;
+    }
+
+    public float GetProductAmmount()
+    {
+        return ammountOfProduct;
+    }
+    public bool isReadyProduct()
+    {
+        return isReady;
+    }
 }

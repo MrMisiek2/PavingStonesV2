@@ -30,7 +30,7 @@ public class MousePalletInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDistance, palletLayer))
         {
             PaletEUROccupancy pallet = hit.collider.GetComponentInParent<PaletEUROccupancy>();
-            Debug.Log("Palete hit take" + pallet);
+            //Debug.Log("Palete hit take" + pallet);
             if (inventory.GetCurrentObject() == null)
                 {
                 if (pallet != null)
@@ -60,14 +60,14 @@ public class MousePalletInteraction : MonoBehaviour
             {
                 if (inventory.GetCurrentObject().prefab != null)
                 {
-                    if (inventory.GetCurrentObject().prefab.GetComponent<Bag>() != null)
+                    if (inventory.GetCurrentObject().prefab.GetComponent<Bag>() != null || inventory.GetCurrentObject().prefab.GetComponent<Kostka>() != null)
                     {
                         WorldItem bagWorldItemPrefab = pallet.AddBag(inventory.GetCurrentInventoryItem());
 
                         if (bagWorldItemPrefab != null)
                         {
                             //Debug.Log("Hello", bagWorldItemPrefab);
-                            inventory.RemoveFromCurrentSlot();
+                            inventory.RemoveFromCurrentSlot(1f);
                             //Debug.Log("Hello3");
                         }
                     }

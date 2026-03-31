@@ -15,3 +15,7 @@ MonoBehaviour:
   itemName: Cement Bag
   prefab: {fileID: 7822111364862138786, guid: 7074da140a9a42c4593860b6787f0f3a, type: 3}
   maxStack: 1
+  maxOnPalette: 20
+  height: 0.1
+  length: 0.45
+  width: 0.3

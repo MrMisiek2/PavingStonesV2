@@ -196,7 +196,7 @@ public class GridBuildSystem : MonoBehaviour
 
         foreach (var hit2 in hits)
         {
-            Debug.Log("Hit w: " + hit2.transform.root + ", hit2: " + previewObject.transform.root);
+            //Debug.Log("Hit w: " + hit2.transform.root + ", hit2: " + previewObject.transform.root);
             if (hit2.transform.root != previewObject.transform.root)
             {
                 overlap = true;
@@ -212,7 +212,7 @@ public class GridBuildSystem : MonoBehaviour
         {
             canPlace = true;
         }
-        Debug.Log("currentRotationX: " + previewObject.transform.eulerAngles.x);
+        //Debug.Log("currentRotationX: " + previewObject.transform.eulerAngles.x);
         snappedPos.y += heightOffset;
         previewObject.transform.position = snappedPos;
         previewObject.transform.rotation = Quaternion.Euler(previewObject.transform.eulerAngles.x, currentRotation, 0f);
@@ -297,7 +297,7 @@ public class GridBuildSystem : MonoBehaviour
             worldItem.Initialize(currentItem);
 
             //occupiedCells.Add(cell);
-            RemoveFromCurrentSlot();
+            RemoveFromCurrentSlot(1f);
 
         }
 
@@ -476,24 +476,24 @@ public class GridBuildSystem : MonoBehaviour
         return true;
     }
 
-    public bool RemoveFromCurrentSlot()
+    public bool RemoveFromCurrentSlot(float amount)
     {
         if (items[currentSlot] == null)
             return false; // slot wolny
 
-        //if (slotsPrefabs[currentSlot] == null)
-        //    return false;
-
-        //GameObject item = Instantiate(itemPrefab, buildPrefabs[currentSlot].transform);
-        //item.transform.localPosition = Vector3.zero;
-        //item.transform.localRotation = Quaternion.identity;
-        //item.transform.localScale = Vector3.one * 0.6f;
-
-        //czyścimy slota jeśli zmienił się na inny
-        previousSlot = -1;
-        items[currentSlot] = new InventoryItem();
-
-        return true;
+        if (items[currentSlot].amount - amount > 0) // jak ilość jest powyżej 0 to zmiejszamy ilość 
+        {
+            items[currentSlot].amount = items[currentSlot].amount - amount;
+            return true;
+        }
+        else if (items[currentSlot].amount - amount == 0) // jak ilosć spadnie do 0 to usuwamy z EQ
+        {
+            previousSlot = -1;
+            items[currentSlot] = new InventoryItem();
+            return true;
+        }
+        else // jak poniżej 0 to błąd 
+            return false;
     }
 
     public ItemData GetCurrentObject()
@@ -519,9 +519,16 @@ public class GridBuildSystem : MonoBehaviour
         return Vector3.zero;
     }
 
-    public void AddItemToSlot(ItemData data, int amount)
+    public void AddItemToSlot(ItemData data, float amount)
     {
         previousSlot = -1;
+        if (items[currentSlot] != null)
+            if (items[currentSlot].data == data)
+            {
+                items[currentSlot].amount = items[currentSlot].amount + amount;
+                return;
+            }
+
         items[currentSlot] = new InventoryItem
         {
             data = data,

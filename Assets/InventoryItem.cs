@@ -5,7 +5,7 @@ public class InventoryItem
 {
     //InventoryItem powinien zawiereać konkretne instancje w ekwipunku (stan)
     public ItemData data;
-    public int amount;
+    public float amount;
 
     // przykładowe dynamiczne rzeczy
     public int durability;

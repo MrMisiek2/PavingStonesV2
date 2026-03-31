@@ -24,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable.Interact();
         }
 
-        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject() != null)
+        if (Input.GetMouseButton(1) && currentInteractable != null && inventory.GetCurrentObject() != null)
         {
             
             if(inventory.GetCurrentObject().prefab.tag != "Form")
@@ -32,12 +32,12 @@ public class PlayerInteraction : MonoBehaviour
                 IItem item = inventory.GetCurrentObject().prefab.GetComponent<IItem>();
                 if (item != null)
                 {
-                    Debug.Log("Dodanie obiektu do betoniarki: ", inventory.GetCurrentObject().prefab);
+                    //Debug.Log("Dodanie obiektu do betoniarki: ", inventory.GetCurrentObject().prefab);
                     int status = currentInteractable.AddIngredient(inventory.GetCurrentObject().prefab, item.GetWeight());
 
                     if (status == 0)
                     {
-                        inventory.RemoveFromCurrentSlot();
+                        inventory.RemoveFromCurrentSlot(1f);
 
                     }
 
@@ -45,12 +45,14 @@ public class PlayerInteraction : MonoBehaviour
             }
             
         }
+
+
         //if (Input.GetMouseButton(0))
         //{ 
         //    Debug.Log("Dodanie obiektu" + currentInteractable + " test " + inventory.GetCurrentObject().data.prefab);
         //}
 
-        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject() != null && inventory.GetCurrentObject() != null)
+        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject() != null)
         {
             if (inventory.GetCurrentObject().prefab.tag == "Form")
             {
@@ -68,8 +70,27 @@ public class PlayerInteraction : MonoBehaviour
             }
             
         }
-            
 
+        //Zabranie kostki z formy i dodanie jej do EQ
+        if (Input.GetMouseButton(0) && currentInteractable != null && inventory.GetCurrentObject() == null)
+        {
+            GameObject forma = currentInteractable.GetGameObject();
+
+            if (forma != null)
+            {
+                if (forma.tag == "Form")
+                {
+                    Forma fForma = forma.GetComponent<Forma>();
+                    if (fForma.isEmptyForm() == false && fForma.isReadyProduct())
+                    {
+                        inventory.AddItemToSlot(fForma.GetProduct(), fForma.GetProductAmmount());
+
+                        WorldItem worldItem = forma.GetComponent<WorldItem>();
+                        worldItem.item.isEmpty = true;
+                    }
+                }
+            }
+        }
     }
 
     void CheckForInteractable()

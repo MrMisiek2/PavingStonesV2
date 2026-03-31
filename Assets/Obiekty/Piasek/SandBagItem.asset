@@ -15,3 +15,7 @@ MonoBehaviour:
   itemName: Sand Bag
   prefab: {fileID: 7822111364862138786, guid: a799a6920a0c23a43b2a009d1c480f78, type: 3}
   maxStack: 1
+  maxOnPalette: 20
+  height: 0.1
+  length: 0.45
+  width: 0.3

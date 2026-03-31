@@ -240,6 +240,7 @@ MonoBehaviour:
   isDrying: 0
   isReady: 0
   previousEmptyState: 1
+  product: {fileID: 11400000, guid: 24d280ed0fef650498adc136e0c80e49, type: 2}
   dryingTime: 15
   infill: {fileID: 3088875372584966970}
 --- !u!114 &-6202526253033747779
