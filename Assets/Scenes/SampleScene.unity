@@ -602,6 +602,8 @@ MonoBehaviour:
   orderText: {fileID: 831773986}
   deliveredAmount: 0
   playerAccount: {fileID: 1592162456}
+  itemsToSell:
+  - {fileID: 11400000, guid: 24d280ed0fef650498adc136e0c80e49, type: 2}
 --- !u!1 &566262325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeliveryZone
   orderManager: {fileID: 564644376}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

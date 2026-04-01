@@ -1,6 +1,8 @@
+using OpenCover.Framework.Model;
 using System;
-using UnityEngine;
+using System.Xml.Linq;
 using TMPro;
+using UnityEngine;
 
 
 
@@ -9,8 +11,10 @@ public class OrderManager : MonoBehaviour
     public Order currentOrder;
     public TextMeshProUGUI orderText;
 
-    public int deliveredAmount = 0;
+    public float deliveredAmount = 0;
     public PlayerAccount playerAccount;
+
+    public ItemData[] itemsToSell;
 
 
     void Start()
@@ -31,7 +35,7 @@ public class OrderManager : MonoBehaviour
         {
             requiredAmount = UnityEngine.Random.Range(5, 15),
             pricePerUnit = UnityEngine.Random.Range(5f, 10f),
-            //product = 
+            product = GetRandomItem()
         };
 
         deliveredAmount = 0;
@@ -39,7 +43,7 @@ public class OrderManager : MonoBehaviour
         Debug.Log("Nowe zamówienie: " + currentOrder.requiredAmount);
     }
 
-    public void Deliver(int amount)
+    public void Deliver(float amount)
     {
         deliveredAmount += amount;
 
@@ -59,6 +63,28 @@ public class OrderManager : MonoBehaviour
         Debug.Log("Zamówienie zrealizowane! Zarobiono: " + earned);
 
         GenerateOrder();
+    }
+
+    ItemData GetRandomItem()
+    {
+        if (itemsToSell.Length == 0)
+            return null;
+
+        return itemsToSell[UnityEngine.Random.Range(0, itemsToSell.Length)];
+    }
+
+    public float GetRequiredAmount()
+    {
+        return currentOrder.requiredAmount;
+    }
+    public GameObject GetRequiredObject()
+    {
+        return currentOrder.product.prefab;
+    }
+
+    public void setDeliveredAmount(float deliveredAmount_)
+    {
+        deliveredAmount = deliveredAmount_;
     }
 
 
