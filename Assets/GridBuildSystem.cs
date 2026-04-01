@@ -180,6 +180,7 @@ public class GridBuildSystem : MonoBehaviour
         if (previewObject == null)
         {
             previewObject = Instantiate(currentPrefab);
+            previewObject.GetComponent<Collider>().isTrigger = false;
             heightOffset = 0f; // CalculateHeightOffset(previewObject);
         }
 

@@ -31,8 +31,8 @@ public class MousePalletInteraction : MonoBehaviour
         {
             PaletEUROccupancy pallet = hit.collider.GetComponentInParent<PaletEUROccupancy>();
             //Debug.Log("Palete hit take" + pallet);
-            if (inventory.GetCurrentObject() == null)
-                {
+            if (inventory.GetCurrentObject() == null) //Jeœli nie masz nic w rêce do dodaj obiekt
+            {
                 if (pallet != null)
                 {
                     //To zabiera worek palety
@@ -44,6 +44,24 @@ public class MousePalletInteraction : MonoBehaviour
                         inventory.AddItemToSlot(bagWorldItemPrefab, 1);
                     }
                 }
+            }
+            else //Jeœli masz ten sam obiekt w rêce to dodaj kolejn¹ sztukê.
+            {
+                if(inventory.GetCurrentObject() == pallet.TakeBagInfo() && inventory.GetCurrentInventoryItem().amount < inventory.GetCurrentObject().maxStack)
+                {
+                    if (pallet != null)
+                    {
+                        //To zabiera worek palety
+                        ItemData bagWorldItemPrefab = pallet.TakeBag();
+
+                        if (bagWorldItemPrefab != null)
+                        {
+                            //To dodaje worek do inventory
+                            inventory.AddItemToSlot(bagWorldItemPrefab, 1);
+                        }
+                    }
+                }
+               
             }
         }
     }

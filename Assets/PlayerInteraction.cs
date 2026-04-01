@@ -105,7 +105,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
             GameObject hitObject = hit.collider.gameObject;
-            Debug.Log("Hit w interactable");
+            //Debug.Log("Hit w interactable");
 
 
             //Jeœli zmieniamy obiekt to wy³¹czamy podpowiedz

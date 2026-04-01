@@ -11,4 +11,6 @@ public class ItemData : ScriptableObject
     public float height; //wysokość obiektu
     public float length; //długość obiektu
     public float width; //szerokość obiektu
+    public float originalPrice; //Cena bazowa
+    public float price; //Cena obecna
 }

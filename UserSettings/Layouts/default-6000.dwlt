@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1918
     height: 988
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -625,36 +625,22 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 38110
+      - m_Data: -2217102
       m_LastClickedID:
-        m_Data: 38110
+        m_Data: -2217102
       m_ExpandedIDs:
-      - m_Data: -636136
-      - m_Data: -552240
-      - m_Data: -552226
-      - m_Data: -552220
-      - m_Data: -551890
-      - m_Data: -517606
-      - m_Data: -492488
-      - m_Data: -477138
-      - m_Data: -476808
-      - m_Data: -458144
-      - m_Data: -457128
-      - m_Data: -456798
-      - m_Data: -442270
-      - m_Data: -421224
-      - m_Data: -420894
-      - m_Data: -399946
-      - m_Data: -367796
-      - m_Data: -367466
-      - m_Data: -235184
-      - m_Data: -209890
-      - m_Data: -17762
-      - m_Data: 38110
+      - m_Data: -2409802
+      - m_Data: -2409464
+      - m_Data: -2234484
+      - m_Data: -2217102
+      - m_Data: -1513104
+      - m_Data: -1722
+      - m_Data: -1282
+      - m_Data: 34498
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Betoniarka
-        m_OriginalName: Betoniarka
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -662,10 +648,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: -18432
+          m_Data: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -1187,9 +1173,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.8651737, y: 0.09504522, z: -0.6450756}
+    m_Target: {x: 2.911, y: 0.35, z: 0.30737}
     speed: 2
-    m_Value: {x: 0.8651737, y: 0.09504522, z: -0.6450756}
+    m_Value: {x: 2.911, y: 0.35, z: 0.30737}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1230,22 +1216,22 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.12141494, y: 0.87833893, z: -0.31565106, w: -0.3378528}
+    m_Target: {x: 0.23616856, y: 0.024775503, z: -0.006023611, w: 0.9713779}
     speed: 2
-    m_Value: {x: -0.12141488, y: 0.8783385, z: -0.3156509, w: -0.33785266}
+    m_Value: {x: 0.23616847, y: 0.024775494, z: -0.0060236086, w: 0.97137755}
   m_Size:
-    m_Target: 2.4305408
+    m_Target: 2.440119
     speed: 2
-    m_Value: 2.4305408
+    m_Value: 2.440119
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1324,7 +1310,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Obiekty/Cement
+    - Assets/Obiekty/Betoniarka
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1334,7 +1320,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Obiekty/Cement
+  - Assets/Obiekty/Betoniarka
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Unity Projects\Production line
   m_LockTracker:
@@ -1343,13 +1329,13 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 38612
+    - m_Data: 35806
     m_LastClickedID:
-      m_Data: 38612
+      m_Data: 35806
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 38330
-    - m_Data: 38484
+    - m_Data: 35660
+    - m_Data: 35762
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -1384,7 +1370,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 38330
+    - m_Data: 35660
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1412,8 +1398,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 38110
-    m_LastClickedInstanceID: 38110
+    - m_Data: -2217102
+    m_LastClickedInstanceID: -2217102
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 34184

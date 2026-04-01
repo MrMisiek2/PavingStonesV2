@@ -15,4 +15,9 @@ MonoBehaviour:
   itemName: Forma Holland
   prefab: {fileID: 6572583181512220944, guid: 2d90bce500761f442aa69c512fbb44f1, type: 3}
   maxStack: 1
-  isEmpty: 0
+  maxOnPalette: 0
+  height: 0
+  length: 0
+  width: 0
+  originalPrice: 2000
+  price: 2000

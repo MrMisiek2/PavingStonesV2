@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
@@ -27,10 +28,13 @@ public class PaletEUROccupancy : MonoBehaviour
         //Debug.Log("instatntiate" + worldItemPrefab.item.data.prefab + "test " + newBagInventoryItem);
         if  (worldItemPrefab != null )
         {
-            Debug.Log("" + worldItemPrefab);
-            Debug.Log("" + newBagInventoryItem);
+            //Debug.Log("" + worldItemPrefab);
+            //Debug.Log("" + newBagInventoryItem);
             if (newBagInventoryItem.data != worldItemPrefab) return null;
         }
+
+        if (currentBags >= newBagInventoryItem.data.maxOnPalette)
+            return null;
 
         //Debug.Log( "Szer "+ ((paletteLength + (0.45 * newBagInventoryItem.data.length)) / newBagInventoryItem.data.length) + "D³ug " + ((paletteWidth + (0.45 * newBagInventoryItem.data.width)) / newBagInventoryItem.data.width));
         bagHeight = newBagInventoryItem.data.height;
@@ -56,17 +60,8 @@ public class PaletEUROccupancy : MonoBehaviour
         bag.transform.localPosition = position;
         WorldItem worldItem = bag.GetComponent<WorldItem>();
         worldItem.Initialize(newBagInventoryItem);
-        Debug.Log("Dziala" + bag);
+        //Debug.Log("Dziala" + bag);
         worldItem.item.amount = 1;
-
-        //worldItemPrefab = bag.GetComponent<WorldItem>();
-        //Debug.Log("worldItem" + worldItemPrefab);
-        //worldItemPrefab.Initialize(newBagInventoryItem);
-
-        //worldItemPrefab = worldItem;
-
-        //GameObject bag = Instantiate(worldItemPrefab.item.data.prefab, bagsParent);
-        //bag.transform.localPosition = position;
 
         currentBags++;
         return worldItem;
@@ -97,6 +92,11 @@ public class PaletEUROccupancy : MonoBehaviour
 
         currentBags--;
 
+        return worldItemPrefab;
+    }
+
+    public ItemData TakeBagInfo() //Informacja co jest na palecie
+    {
         return worldItemPrefab;
     }
 

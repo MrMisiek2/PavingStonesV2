@@ -15,7 +15,9 @@ MonoBehaviour:
   itemName: Kostka Holland
   prefab: {fileID: 4442486042970913652, guid: 6a6ac55ee347db9419de4388db658c1c, type: 3}
   maxStack: 10
-  maxOnPalette: 200
+  maxOnPalette: 500
   height: 0.06
   length: 0.2
   width: 0.1
+  originalPrice: 1.2
+  price: 1.2
