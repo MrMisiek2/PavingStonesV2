@@ -7,20 +7,40 @@
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\zam\u00F3wienia\\deliveryzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\betoniarka\\betoniarkabehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\betoniarka\\betoniarkabehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\zam\u00F3wienia\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\zam\u00F3wienia\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\kostka\\kostka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\kostka\\kostka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\paleteuroccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\paleteuroccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\gridbuildsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\gridbuildsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\betoniarka\\betoniarkabehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\betoniarka\\betoniarkabehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\formy\\formahollandscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\formy\\formahollandscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\mousepalletinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\mousepalletinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\kostka\\kostka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\kostka\\kostka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\player\\playeraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\zam\u00F3wienia\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\obiekty\\zam\u00F3wienia\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\gridbuildsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\gridbuildsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\obiekty\\kostka\\kostkahollandscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,24 +79,8 @@
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\worlditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\mousepalletinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\mousepalletinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\paleteuroccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\paleteuroccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\fpsplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\fpsplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|s:\\unity\\pavingstonesv2\\assets\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +94,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "GridBuildSystem.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\GridBuildSystem.cs",
               "RelativeDocumentMoniker": "Assets\\GridBuildSystem.cs",
@@ -108,13 +108,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "BetoniarkaBehaviourScript.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Betoniarka\\BetoniarkaBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Betoniarka\\BetoniarkaBehaviourScript.cs",
               "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Betoniarka\\BetoniarkaBehaviourScript.cs",
               "RelativeToolTip": "Assets\\Obiekty\\Betoniarka\\BetoniarkaBehaviourScript.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T21:39:48.21Z",
               "IsPinned": true,
@@ -128,7 +128,7 @@
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs",
               "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs",
               "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwEgAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwIQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T20:10:12.518Z",
               "IsPinned": true,
@@ -136,13 +136,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OrderManager.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwFQAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwA4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T20:10:13.207Z",
               "IsPinned": true,
@@ -150,59 +150,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Kostka.cs",
-              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Kostka\\Kostka.cs",
-              "RelativeDocumentMoniker": "Assets\\Obiekty\\Kostka\\Kostka.cs",
-              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Kostka\\Kostka.cs",
-              "RelativeToolTip": "Assets\\Obiekty\\Kostka\\Kostka.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PaletEUROccupancy.cs",
+              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\PaletEUROccupancy.cs",
+              "RelativeDocumentMoniker": "Assets\\PaletEUROccupancy.cs",
+              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\PaletEUROccupancy.cs",
+              "RelativeToolTip": "Assets\\PaletEUROccupancy.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowF0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T20:10:13.624Z",
+              "WhenOpened": "2026-03-18T22:53:43.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PlayerAccount.cs",
-              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "RelativeDocumentMoniker": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "RelativeToolTip": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T20:10:13.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Order.cs",
-              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
-              "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
-              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
-              "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T20:10:13.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "FormaHollandScript.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Formy\\FormaHollandScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Formy\\FormaHollandScript.cs",
               "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Formy\\FormaHollandScript.cs",
               "RelativeToolTip": "Assets\\Obiekty\\Formy\\FormaHollandScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAYwFQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T21:43:02.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemData.cs",
+              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\ItemData.cs",
+              "RelativeDocumentMoniker": "Assets\\ItemData.cs",
+              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\ItemData.cs",
+              "RelativeToolTip": "Assets\\ItemData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T22:03:38.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MousePalletInteraction.cs",
+              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\MousePalletInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\MousePalletInteraction.cs",
+              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\MousePalletInteraction.cs",
+              "RelativeToolTip": "Assets\\MousePalletInteraction.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T22:43:55.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "InventoryItem.cs",
+              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\InventoryItem.cs",
+              "RelativeDocumentMoniker": "Assets\\InventoryItem.cs",
+              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\InventoryItem.cs",
+              "RelativeToolTip": "Assets\\InventoryItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T22:03:14.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "KostkaHollandScript.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs",
@@ -210,12 +223,47 @@
               "RelativeToolTip": "Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T20:10:13.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T20:10:13.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Order.cs",
+              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
+              "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
+              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
+              "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T20:10:13.005Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "PlayerAccount.cs",
+              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "RelativeDocumentMoniker": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "RelativeToolTip": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T20:10:13.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Kostka.cs",
+              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Kostka\\Kostka.cs",
+              "RelativeDocumentMoniker": "Assets\\Obiekty\\Kostka\\Kostka.cs",
+              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Kostka\\Kostka.cs",
+              "RelativeToolTip": "Assets\\Obiekty\\Kostka\\Kostka.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T20:10:13.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Forma.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Formy\\Forma.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Formy\\Forma.cs",
@@ -227,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "IItem.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\IItem.cs",
               "RelativeDocumentMoniker": "Assets\\IItem.cs",
@@ -239,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "WorldItem.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\WorldItem.cs",
               "RelativeDocumentMoniker": "Assets\\WorldItem.cs",
@@ -251,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "PlayerInteraction.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\PlayerInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerInteraction.cs",
@@ -259,12 +307,11 @@
               "RelativeToolTip": "Assets\\PlayerInteraction.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T19:52:15.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-19T19:52:15.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "CementBagScript.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Cement\\CementBagScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Cement\\CementBagScript.cs",
@@ -276,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "SandBagScript.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\Obiekty\\Piasek\\SandBagScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Piasek\\SandBagScript.cs",
@@ -288,43 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MousePalletInteraction.cs",
-              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\MousePalletInteraction.cs",
-              "RelativeDocumentMoniker": "Assets\\MousePalletInteraction.cs",
-              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\MousePalletInteraction.cs",
-              "RelativeToolTip": "Assets\\MousePalletInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T22:43:55.972Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "InventoryItem.cs",
-              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\InventoryItem.cs",
-              "RelativeDocumentMoniker": "Assets\\InventoryItem.cs",
-              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\InventoryItem.cs",
-              "RelativeToolTip": "Assets\\InventoryItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T22:03:14.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "PaletEUROccupancy.cs",
-              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\PaletEUROccupancy.cs",
-              "RelativeDocumentMoniker": "Assets\\PaletEUROccupancy.cs",
-              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\PaletEUROccupancy.cs",
-              "RelativeToolTip": "Assets\\PaletEUROccupancy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T22:53:43.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "FPSPlayerController.cs",
               "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\FPSPlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\FPSPlayerController.cs",
@@ -333,18 +344,6 @@
               "ViewState": "AgIAAEoAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T21:47:17.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ItemData.cs",
-              "DocumentMoniker": "S:\\UNITY\\PavingStonesV2\\Assets\\ItemData.cs",
-              "RelativeDocumentMoniker": "Assets\\ItemData.cs",
-              "ToolTip": "S:\\UNITY\\PavingStonesV2\\Assets\\ItemData.cs",
-              "RelativeToolTip": "Assets\\ItemData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T22:03:38.325Z"
             }
           ]
         }

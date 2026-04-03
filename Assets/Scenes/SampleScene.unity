@@ -601,6 +601,7 @@ MonoBehaviour:
     product: {fileID: 0}
   orderText: {fileID: 831773986}
   deliveredAmount: 0
+  deliveredAmountInZone: 0
   playerAccount: {fileID: 1592162456}
   itemsToSell:
   - {fileID: 11400000, guid: 24d280ed0fef650498adc136e0c80e49, type: 2}
@@ -1148,6 +1149,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+  itemsInZone: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

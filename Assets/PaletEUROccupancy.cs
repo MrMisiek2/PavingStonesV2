@@ -86,6 +86,9 @@ public class PaletEUROccupancy : MonoBehaviour
 
         Transform lastBag = bagsParent.GetChild(bagsParent.childCount - 1);
         WorldItem worldItem = lastBag.GetComponent<WorldItem>();
+        Debug.Log("Zabierz worek z palety" + worldItem.gameObject.GetEntityId());
+
+        lastBag.SetParent(null);
         Destroy(worldItem.gameObject); 
         
         //Destroy(lastBag.gameObject);

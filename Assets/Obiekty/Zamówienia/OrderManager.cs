@@ -12,6 +12,7 @@ public class OrderManager : MonoBehaviour
     public TextMeshProUGUI orderText;
 
     public float deliveredAmount = 0;
+    public float deliveredAmountInZone = 0;
     public PlayerAccount playerAccount;
 
     public ItemData[] itemsToSell;
@@ -25,7 +26,7 @@ public class OrderManager : MonoBehaviour
     void Update()
     {
         orderText.text = "Obecne zamówienie: "
-            + deliveredAmount + "/" + currentOrder.requiredAmount;
+            + deliveredAmountInZone + "/" + currentOrder.requiredAmount;
     }
 
 
@@ -77,14 +78,19 @@ public class OrderManager : MonoBehaviour
     {
         return currentOrder.requiredAmount;
     }
-    public GameObject GetRequiredObject()
+    public ItemData GetRequiredObject()
     {
-        return currentOrder.product.prefab;
+        return currentOrder.product;
     }
 
-    public void setDeliveredAmount(float deliveredAmount_)
+    public float GetDeliveredAmount()
     {
-        deliveredAmount = deliveredAmount_;
+        return deliveredAmount;
+    }
+
+    public void updateDeliveredAmountInZone(float deliveredAmount_)
+    {
+        deliveredAmountInZone = deliveredAmountInZone + deliveredAmount_;
     }
 
 
