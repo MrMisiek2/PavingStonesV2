@@ -58,76 +58,82 @@ public class DeliveryZone : MonoBehaviour
 
     void CheckDelivery()
     {
-        if (orderManager.GetRequiredObject().prefab.GetComponent<WorldItem>() != null)
+
+        foreach (OrderElement el in orderManager.currentOrder.elements)
         {
-            ItemData requiredObject = orderManager.GetRequiredObject();
-            float requiredAmount = orderManager.GetRequiredAmount();
 
 
-            //Zlicz ile towarów na placeie jest w tej strefie 
-            orderManager.deliveredAmountInZone = 0;
-            foreach (WorldItem item in itemsInZone)
+            if (orderManager.GetRequiredObject(el).prefab.GetComponent<WorldItem>() != null)
             {
-                PaletEUROccupancy palet = item.GetComponent<PaletEUROccupancy>();
-                if (palet != null)
-                {
-                    ItemData deliveredObject = palet.TakeBagInfo();
-                    int deliveredAmmount = palet.GetCurrentBags();
-                    //Debug.Log("deliveredObject" + deliveredObject.itemName);
-                    if (requiredObject == deliveredObject)
-                    {
-                        orderManager.updateDeliveredAmountInZone(deliveredAmmount);
-                       // Debug.Log("orderManager" + orderManager.deliveredAmountInZone);
-                    }
-                }
-            }
+                ItemData requiredObject = orderManager.GetRequiredObject(el);
+                float requiredAmount = orderManager.GetRequiredAmount(el);
 
-            Debug.Log("orderManager" + orderManager.deliveredAmountInZone);
-            //jeśli w strefie jest wystarczająco obiektów żeby je sprzedać to je usuwamy 
-            if (orderManager.deliveredAmountInZone >= orderManager.GetRequiredAmount())
-            {
+
+                //Zlicz ile towarów na placeie jest w tej strefie 
+                el.itemInZone = 0;
                 foreach (WorldItem item in itemsInZone)
                 {
                     PaletEUROccupancy palet = item.GetComponent<PaletEUROccupancy>();
                     if (palet != null)
                     {
                         ItemData deliveredObject = palet.TakeBagInfo();
-
+                        int deliveredAmmount = palet.GetCurrentBags();
+                        //Debug.Log("deliveredObject" + deliveredObject.itemName);
                         if (requiredObject == deliveredObject)
                         {
-                            float amount = 0f;
-                            if (palet.GetCurrentBags() < orderManager.GetRequiredAmount())
-                                amount = palet.GetCurrentBags();
-                            else
-                                amount = orderManager.GetRequiredAmount();
-                            Debug.Log("amount " + amount);
-                            for (int i = 0; i < amount; i++)
-                            {
-
-                                Debug.Log("TakeBag " + amount);
-                                ItemData item2 = palet.TakeBag();
-                            }
-                            orderManager.Deliver(amount);
+                            orderManager.updateDeliveredAmountInZone(el, deliveredAmmount);
+                            // Debug.Log("orderManager" + orderManager.deliveredAmountInZone);
                         }
-
                     }
                 }
-            }
 
-            //Zlicz ile towarów na placeie jest w tej strefie 
-            orderManager.deliveredAmountInZone = 0;
-            foreach (WorldItem item in itemsInZone)
-            {
-                PaletEUROccupancy palet = item.GetComponent<PaletEUROccupancy>();
-                if (palet != null)
+
+                //jeśli w strefie jest wystarczająco obiektów żeby je sprzedać to je usuwamy 
+                if (el.itemInZone >= orderManager.GetRequiredAmount(el) && el.deliveredAmount<el.requiredAmount)
                 {
-                    ItemData deliveredObject = palet.TakeBagInfo();
-                    int deliveredAmmount = palet.GetCurrentBags();
-                    //Debug.Log("deliveredObject" + deliveredObject.itemName);
-                    if (requiredObject == deliveredObject)
+                    foreach (WorldItem item in itemsInZone)
                     {
-                        orderManager.updateDeliveredAmountInZone(deliveredAmmount);
-                        // Debug.Log("orderManager" + orderManager.deliveredAmountInZone);
+                        PaletEUROccupancy palet = item.GetComponent<PaletEUROccupancy>();
+                        if (palet != null)
+                        {
+                            ItemData deliveredObject = palet.TakeBagInfo();
+
+                            if (requiredObject == deliveredObject)
+                            {
+                                float amount = 0f;
+                                if (palet.GetCurrentBags() < orderManager.GetRequiredAmount(el))
+                                    amount = palet.GetCurrentBags();
+                                else
+                                    amount = orderManager.GetRequiredAmount(el);
+                                Debug.Log("amount " + amount);
+                                for (int i = 0; i < amount; i++)
+                                {
+
+                                    Debug.Log("TakeBag " + amount);
+                                    ItemData item2 = palet.TakeBag();
+                                }
+                                orderManager.Deliver(el,amount);
+                            }
+
+                        }
+                    }
+                }
+
+                //Zlicz ile towarów na placeie jest w tej strefie 
+                el.itemInZone = 0;
+                foreach (WorldItem item in itemsInZone)
+                {
+                    PaletEUROccupancy palet = item.GetComponent<PaletEUROccupancy>();
+                    if (palet != null)
+                    {
+                        ItemData deliveredObject = palet.TakeBagInfo();
+                        int deliveredAmmount = palet.GetCurrentBags();
+                        //Debug.Log("deliveredObject" + deliveredObject.itemName);
+                        if (requiredObject == deliveredObject)
+                        {
+                            orderManager.updateDeliveredAmountInZone(el, deliveredAmmount);
+                            // Debug.Log("orderManager" + orderManager.deliveredAmountInZone);
+                        }
                     }
                 }
             }

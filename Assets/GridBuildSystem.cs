@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework.Constraints;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,6 +50,7 @@ public class GridBuildSystem : MonoBehaviour
     public ItemData BucketOfWater;
     public ItemData EmptyForm;
 
+    public TextMeshProUGUI currentItemText;
 
 
 
@@ -68,6 +70,27 @@ public class GridBuildSystem : MonoBehaviour
         HandleInput();
         UpdateDemolishUI();
         //UpdateVisualGrid();
+
+        if (items[currentSlot] != null)
+        {
+            if (items[currentSlot].data != null)
+            {
+                if (items[currentSlot].data.itemName != null)
+                {
+                    currentItemText.text = "Item: " + items[currentSlot].data.itemName;
+                    if (items[currentSlot].amount > 1)
+                        currentItemText.text = currentItemText.text + " (" + items[currentSlot].amount + ")";
+                }
+                else
+                    currentItemText.text = "";
+            }
+            else
+                currentItemText.text = "";
+        }
+        else
+            currentItemText.text = "";
+
+
     }
 
     // --- SLOT ---

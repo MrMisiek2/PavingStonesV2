@@ -6,8 +6,9 @@
     "\\Assets\\Obiekty\\Betoniarka",
     "\\Assets\\Obiekty\\Cement",
     "\\Assets\\Obiekty\\Formy",
-    "\\Assets\\Obiekty\\Piasek"
+    "\\Assets\\Obiekty\\Piasek",
+    "\\Assets\\Obiekty\\Zamówienia"
   ],
-  "SelectedNode": "\\Assets\\ItemData.cs",
+  "SelectedNode": "\\Assets\\Obiekty\\Betoniarka\\Billboard.cs.meta",
   "PreviewInSolutionExplorer": false
 }

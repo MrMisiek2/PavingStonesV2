@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Unity Projects\\Production line\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,6 +77,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -99,8 +103,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T11:13:49.789Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -110,7 +113,7 @@
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T11:18:28.127Z",
               "IsPinned": true,
@@ -126,8 +129,7 @@
               "RelativeToolTip": "Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T14:59:26.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T14:59:26.465Z"
             },
             {
               "$type": "Document",
@@ -139,8 +141,7 @@
               "RelativeToolTip": "Assets\\MousePalletInteraction.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAAACMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T14:51:36.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T14:51:36.596Z"
             },
             {
               "$type": "Document",
@@ -152,8 +153,7 @@
               "RelativeToolTip": "Assets\\PaletEUROccupancy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T13:33:01.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T13:33:01.59Z"
             },
             {
               "$type": "Document",
@@ -165,8 +165,7 @@
               "RelativeToolTip": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T15:30:09.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T15:30:09.9Z"
             },
             {
               "$type": "Document",
@@ -178,8 +177,7 @@
               "RelativeToolTip": "Assets\\PlayerInteraction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T08:57:14.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T08:57:14.475Z"
             },
             {
               "$type": "Document",
@@ -191,8 +189,7 @@
               "RelativeToolTip": "Assets\\Obiekty\\Piasek\\SandBagScript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T14:58:50.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T14:58:50.293Z"
             },
             {
               "$type": "Document",
@@ -204,8 +201,7 @@
               "RelativeToolTip": "Assets\\ItemData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T11:40:56.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T11:40:56.35Z"
             },
             {
               "$type": "Document",
@@ -217,8 +213,7 @@
               "RelativeToolTip": "Assets\\Obiekty\\Kostka\\Kostka.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T14:57:54.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T14:57:54.078Z"
             },
             {
               "$type": "Document",
@@ -230,8 +225,7 @@
               "RelativeToolTip": "Assets\\InventoryItem.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T10:11:10.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T10:11:10.402Z"
             },
             {
               "$type": "Document",
@@ -243,8 +237,7 @@
               "RelativeToolTip": "Assets\\IItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T11:43:32.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T11:43:32.942Z"
             },
             {
               "$type": "Document",
@@ -256,8 +249,7 @@
               "RelativeToolTip": "Assets\\IInteractable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T11:45:07.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T11:45:07.438Z"
             },
             {
               "$type": "Document",
@@ -269,8 +261,7 @@
               "RelativeToolTip": "Assets\\GridBuildSystem.cs",
               "ViewState": "AgIAAAECAAAAAAAAAAAAALYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:06:04.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:06:04.794Z"
             },
             {
               "$type": "Document",
@@ -282,8 +273,7 @@
               "RelativeToolTip": "Assets\\FPSPlayerController.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:06:00.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:06:00.878Z"
             },
             {
               "$type": "Document",
@@ -295,8 +285,7 @@
               "RelativeToolTip": "Assets\\Obiekty\\Formy\\FormaHollandScript.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAAAAMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T11:57:42.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T11:57:42.792Z"
             },
             {
               "$type": "Document",
@@ -308,8 +297,7 @@
               "RelativeToolTip": "Assets\\Obiekty\\Formy\\Forma.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T13:49:21.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T13:49:21.528Z"
             },
             {
               "$type": "Document",
@@ -321,8 +309,7 @@
               "RelativeToolTip": "Assets\\Obiekty\\Betoniarka\\BetoniarkaBehaviourScript.cs",
               "ViewState": "AgIAAO0AAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T08:46:35.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T08:46:35.991Z"
             },
             {
               "$type": "Document",
@@ -334,7 +321,19 @@
               "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T11:36:50.446Z",
+              "WhenOpened": "2026-04-01T11:36:50.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderManager.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
+              "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAwwHkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T20:42:55.07Z",
               "EditorCaption": ""
             }
           ]
