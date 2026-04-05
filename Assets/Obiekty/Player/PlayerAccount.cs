@@ -24,4 +24,9 @@ public class PlayerAccount : MonoBehaviour
         money += money_;
         moneyText.text = "Money: " + Math.Round(money, 2) + " PLN";
     }
+
+    public float GetMoney()
+    {
+        return money;
+    }
 }

@@ -1,3 +1,4 @@
+using System.Security;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,11 +13,34 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private IInteractable currentInteractable;
     [SerializeField] private GridBuildSystem inventory;
 
+    private bool shopOpen;
+    public Canvas shopCanvas;
+
 
     private GameObject currentObject;
 
+    void Start()
+    {
+        shopOpen = false;
+        SetShopOpen(shopOpen);
+    }
+
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (shopOpen)
+                shopOpen=false;
+            else 
+                shopOpen=true;
+
+            SetShopOpen(shopOpen);
+        }
+
+        if (shopOpen)
+            return;
+
         CheckForInteractable();
 
         if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
@@ -164,5 +188,12 @@ public class PlayerInteraction : MonoBehaviour
         {
             canvas.gameObject.SetActive(state);
         }
+    }
+
+    void SetShopOpen(bool open)
+    {
+        shopCanvas.gameObject.SetActive(open);
+        FPSPlayerController fps = gameObject.GetComponent<FPSPlayerController>();
+        fps.SetActive(!open);
     }
 }

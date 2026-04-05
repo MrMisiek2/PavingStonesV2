@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Unity Projects\\Production line\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\ShopManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ShopManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\ItemData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ItemData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Piasek\\SandBagScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Piasek\\SandBagScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\ShopUi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ShopUi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\PlayerInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\ShopItemUi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ShopItemUi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Player\\PlayerAccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Player\\PlayerAccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\PaletEUROccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PaletEUROccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\PlayerInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Piasek\\SandBagScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Piasek\\SandBagScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\FPSPlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\FPSPlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\MousePalletInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +45,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\PaletEUROccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PaletEUROccupancy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Kostka\\Kostka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GridBuildSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\FPSPlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\FPSPlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Formy\\FormaHollandScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Formy\\FormaHollandScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -81,6 +93,10 @@
     {
       "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Cement\\CementBagScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Obiekty\\Cement\\CementBagScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,11 +106,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\Order.cs",
@@ -107,13 +123,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "OrderManager.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T11:18:28.127Z",
               "IsPinned": true,
@@ -121,7 +137,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "ShopManager.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\ShopManager.cs",
+              "RelativeDocumentMoniker": "Assets\\ShopManager.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\ShopManager.cs",
+              "RelativeToolTip": "Assets\\ShopManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T19:27:03.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItemData.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\ItemData.cs",
+              "RelativeDocumentMoniker": "Assets\\ItemData.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\ItemData.cs",
+              "RelativeToolTip": "Assets\\ItemData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T19:20:16.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShopUi.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\ShopUi.cs",
+              "RelativeDocumentMoniker": "Assets\\ShopUi.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\ShopUi.cs",
+              "RelativeToolTip": "Assets\\ShopUi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T19:14:52.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShopItemUi.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\ShopItemUi.cs",
+              "RelativeDocumentMoniker": "Assets\\ShopItemUi.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\ShopItemUi.cs",
+              "RelativeToolTip": "Assets\\ShopItemUi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T19:11:24.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "KostkaHollandScript.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs",
@@ -129,11 +197,12 @@
               "RelativeToolTip": "Assets\\Obiekty\\Kostka\\KostkaHollandScript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T14:59:26.465Z"
+              "WhenOpened": "2026-03-31T14:59:26.465Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "MousePalletInteraction.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\MousePalletInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\MousePalletInteraction.cs",
@@ -141,11 +210,64 @@
               "RelativeToolTip": "Assets\\MousePalletInteraction.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAAACMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T14:51:36.596Z"
+              "WhenOpened": "2026-03-31T14:51:36.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerAccount.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "RelativeDocumentMoniker": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "RelativeToolTip": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T15:30:09.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "PlayerInteraction.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\PlayerInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerInteraction.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\PlayerInteraction.cs",
+              "RelativeToolTip": "Assets\\PlayerInteraction.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T08:57:14.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SandBagScript.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Piasek\\SandBagScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Obiekty\\Piasek\\SandBagScript.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Piasek\\SandBagScript.cs",
+              "RelativeToolTip": "Assets\\Obiekty\\Piasek\\SandBagScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T14:58:50.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FPSPlayerController.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\FPSPlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\FPSPlayerController.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\FPSPlayerController.cs",
+              "RelativeToolTip": "Assets\\FPSPlayerController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T09:06:00.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "PaletEUROccupancy.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\PaletEUROccupancy.cs",
               "RelativeDocumentMoniker": "Assets\\PaletEUROccupancy.cs",
@@ -157,55 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlayerAccount.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "RelativeDocumentMoniker": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "RelativeToolTip": "Assets\\Obiekty\\Player\\PlayerAccount.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T15:30:09.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerInteraction.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\PlayerInteraction.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerInteraction.cs",
-              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\PlayerInteraction.cs",
-              "RelativeToolTip": "Assets\\PlayerInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T08:57:14.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SandBagScript.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Piasek\\SandBagScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Obiekty\\Piasek\\SandBagScript.cs",
-              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Piasek\\SandBagScript.cs",
-              "RelativeToolTip": "Assets\\Obiekty\\Piasek\\SandBagScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T14:58:50.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ItemData.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\ItemData.cs",
-              "RelativeDocumentMoniker": "Assets\\ItemData.cs",
-              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\ItemData.cs",
-              "RelativeToolTip": "Assets\\ItemData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T11:40:56.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Kostka.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Kostka\\Kostka.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Kostka\\Kostka.cs",
@@ -217,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "InventoryItem.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\InventoryItem.cs",
               "RelativeDocumentMoniker": "Assets\\InventoryItem.cs",
@@ -229,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "IItem.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\IItem.cs",
               "RelativeDocumentMoniker": "Assets\\IItem.cs",
@@ -241,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "IInteractable.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\IInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\IInteractable.cs",
@@ -253,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "GridBuildSystem.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\GridBuildSystem.cs",
               "RelativeDocumentMoniker": "Assets\\GridBuildSystem.cs",
@@ -265,19 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FPSPlayerController.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\FPSPlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\FPSPlayerController.cs",
-              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\FPSPlayerController.cs",
-              "RelativeToolTip": "Assets\\FPSPlayerController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:06:00.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "FormaHollandScript.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Formy\\FormaHollandScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Formy\\FormaHollandScript.cs",
@@ -289,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Forma.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Formy\\Forma.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Formy\\Forma.cs",
@@ -301,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "BetoniarkaBehaviourScript.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Betoniarka\\BetoniarkaBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Betoniarka\\BetoniarkaBehaviourScript.cs",
@@ -313,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "DeliveryZone.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\DeliveryZone.cs",
@@ -325,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "OrderManager.cs",
               "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "RelativeDocumentMoniker": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
@@ -333,8 +395,19 @@
               "RelativeToolTip": "Assets\\Obiekty\\Zam\u00F3wienia\\OrderManager.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAwwHkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T20:42:55.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T20:42:55.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CementBagScript.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Cement\\CementBagScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Obiekty\\Cement\\CementBagScript.cs",
+              "ToolTip": "C:\\Unity Projects\\Production line\\Assets\\Obiekty\\Cement\\CementBagScript.cs",
+              "RelativeToolTip": "Assets\\Obiekty\\Cement\\CementBagScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T10:52:56.815Z"
             }
           ]
         }

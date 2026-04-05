@@ -1,4 +1,6 @@
+using System.Reflection;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "Item")]
 public class ItemData : ScriptableObject
@@ -13,4 +15,5 @@ public class ItemData : ScriptableObject
     public float width; //szerokość obiektu
     public float originalPrice; //Cena bazowa
     public float price; //Cena obecna
+    public Sprite icon;
 }

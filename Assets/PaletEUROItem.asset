@@ -15,4 +15,10 @@ MonoBehaviour:
   itemName: Palet EURO
   prefab: {fileID: 5167695909784023013, guid: 88c03ea86843bd54394f0700fc918616, type: 3}
   maxStack: 1
-  isEmpty: 0
+  maxOnPalette: 0
+  height: 0
+  length: 0
+  width: 0
+  originalPrice: 0
+  price: 10
+  icon: {fileID: 0}

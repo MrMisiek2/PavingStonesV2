@@ -24,6 +24,7 @@ public class FPSPlayerController : MonoBehaviour
     private float xRotation;
     private bool isCrouching;
     private float standHeight;
+    private bool isActive;
 
     void Start()
     {
@@ -32,13 +33,18 @@ public class FPSPlayerController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isActive = true;
     }
 
     void Update()
     {
-        Look();
-        HandleCrouch();
-        HandleMovement();
+
+        if (isActive)
+        {
+            Look();
+            HandleCrouch();
+            HandleMovement();
+        }
     }
 
     void Look()
@@ -93,5 +99,21 @@ public class FPSPlayerController : MonoBehaviour
             isCrouching = false;
 
         controller.height = isCrouching ? crouchHeight : standHeight;
+    }
+
+    public void SetActive(bool active)
+    {
+        if (active)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            isActive = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            isActive = false;
+        }
     }
 }
